@@ -1,0 +1,7 @@
+dataset,view,first_epoch,last_epochs,p_in_list_first,p_in_list_last5,entry_share_first,entry_share_last5,runs
+baby,mask,0,15-19,0.0031,0.3353,0.9887,0.7039,5
+baby,full,0,14-18,0.2651,0.8766,0.5005,0.2556,5
+pantry,mask,0,31-36,0.0047,0.3305,0.9486,0.7090,5
+pantry,full,0,25-30,0.2411,0.7980,0.5008,0.3701,5
+scientific,mask,0,24-36,0.0295,0.6080,0.9311,0.5733,5
+scientific,full,0,21-33,0.5319,0.9833,0.3456,0.0740,5

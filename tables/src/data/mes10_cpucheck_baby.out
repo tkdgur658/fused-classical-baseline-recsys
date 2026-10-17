@@ -1,0 +1,37 @@
+<RUN_ROOT>/study/MES10/wt/models/msca/src/msca.py:99: RuntimeWarning: divide by zero encountered in power
+  d_item = np.power(item_degrees, -0.5)
+<RUN_ROOT>/study/MES10/wt/models/msca/src/msca.py:107: UserWarning: torch.sparse.SparseTensor(indices, values, shape, *, device=) is deprecated.  Please use torch.sparse_coo_tensor(indices, values, shape, dtype=, device=). (Triggered internally at /pytorch/torch/csrc/utils/tensor_new.cpp:654.)
+  norm_R = torch.sparse.FloatTensor(
+  [OBJX] {"objx_main": "bpr", "tau": 0.0, "neg_num": 1, "psl_tau_score": null, "scores": "dot", "aux": "refset", "w_lambda": 0.3, "refset": {"support_K": 10, "Q_mean": 0.12446691421841094, "Q_max": 7.3158315271139145, "tau": 0.10000000149011612, "frac_user_item_above_tau": 0.36639789179711696}, "r4_ceiling": "none", "r4_resid": "none"}
+<RUN_ROOT>/study/MES10/wt/models/msca/src/msca.py:97: RuntimeWarning: divide by zero encountered in power
+  d_user = np.power(user_degrees, -0.5)
+  [R12] arm=xre lambda=0.3 history_keys=118551 K=20 fold0_heldout=59296 fold0_users_no_visible=1141 fold1_heldout=59255 fold1_users_no_visible=1074
+  [XRES] arm=xre lambda=0.3 K=40 (r12 K_LIST=20 replaced) novctrl comp=list parts=entry probe=all dns_m=50
+  [XRES0] nc_anchor=drop arm_used_by_aux=xro nc_parts=entry nc_comp=list nc_probe=all lambda=0.3 K=40
+  [XRES0F] nc_view=full arm_used_by_aux=xfo nc_parts=entry
+<RUN_ROOT>/study/MES10/wt/models/xres0s/src/xres0s.py:53: RuntimeWarning: divide by zero encountered in power
+  di = np.power(np.array(R.sum(axis=0)).flatten(), -0.5); di[np.isinf(di)] = 0.
+  [XRES0S] ss_mode=self ss_channels=both arm_used_by_aux=xfo
+{
+ "ckpt": "<RUN_ROOT_B>/P04_mestune/runs_mestune/xres0/xres0__baby_xres_xeoa0_l030_k40__baby__s1__train__aa540a46dc/261009_094654_XRES0_baby/261009_094654_XRES0_baby.pt",
+ "missing": [],
+ "unexpected": [],
+ "baby_seed1_trained": {
+  "n_edges": 40,
+  "identity_max_abs": 1.1920928955078125e-07,
+  "summand_vs_vector_max_abs": 1.7881393432617188e-07,
+  "mean_abs_s": 2.280908930301666,
+  "mean_S": 0.7557912230491638,
+  "mean_SC": 0.5184341393411159,
+  "mean_SV": 0.2373570766299963,
+  "mean_abs_exact_LOO_drop": 0.7435945376753808,
+  "mean_abs_resid_total": 0.09645232558250427,
+  "max_abs_resid_total": 0.4385054111480713,
+  "mean_abs_resid_user_side": 0.11552515886723995,
+  "mean_abs_resid_item_side": 0.10332847349345683,
+  "resid_total_over_mean_abs_S": 0.1276176841448053,
+  "corr_S_vs_exact_drop": 0.8841014048073371,
+  "mean_signed_resid_total": 0.012196685373783111
+ }
+}
+rc=0

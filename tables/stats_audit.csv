@@ -1,0 +1,73 @@
+contrast,a,b,dataset,metric,n_seeds,mean_diff,ci95_lo,ci95_hi,seeds_a_gt_b,test,p_nominal,holm_family,holm_m,p_holm,significant_holm,ci_excludes_zero
+(2),XRE,A,baby,r20,5,+0.00166,+0.00066,+0.00266,5,paired,0.01008,T3-down,4,0.02016,1,1
+(2),XRE,A,pantry,r20,5,+0.00220,+0.00148,+0.00292,5,paired,0.001081,T3-down,4,0.004324,1,1
+(2),XRE,A,scientific,r20,5,+0.00164,+0.00090,+0.00238,5,paired,0.003499,T3-down,4,0.0105,1,1
+(2),XRE,A,sports,r20,5,+0.00220,+0.00183,+0.00257,5,paired,8.097e-05,T3-down,4,0.0003239,1,1
+(2),XRE,A,baby,n20,5,+0.00060,+0.00001,+0.00119,5,paired,0.04742,T3-down,4,0.1423,0,1
+(2),XRE,A,pantry,n20,5,+0.00092,+0.00030,+0.00154,5,paired,0.01438,T3-down,4,0.05754,0,1
+(2),XRE,A,scientific,n20,5,+0.00098,+0.00074,+0.00122,5,paired,0.0003386,T3-down,4,0.001355,1,1
+(2),XRE,A,sports,n20,5,+0.00090,+0.00081,+0.00099,5,paired,9.07e-06,T3-down,4,3.628e-05,1,1
+(5),XRE,A + masked DNS,baby,r20,5,+0.00034,-0.00046,+0.00114,3,paired,0.3048,T3-down,4,0.3048,0,0
+(5),XRE,A + masked DNS,pantry,r20,5,+0.00100,-0.00035,+0.00235,4,paired,0.1081,T3-down,4,0.2162,0,0
+(5),XRE,A + masked DNS,scientific,r20,5,+0.00058,-0.00038,+0.00154,4,paired,0.1699,T3-down,4,0.2603,0,0
+(5),XRE,A + masked DNS,sports,r20,5,+0.00052,-0.00056,+0.00160,4,paired,0.2524,T3-down,4,0.5047,0,0
+(5),XRE,A + masked DNS,baby,n20,5,+0.00006,-0.00044,+0.00056,2,paired,0.7563,T3-down,4,0.7563,0,0
+(5),XRE,A + masked DNS,pantry,n20,5,+0.00014,-0.00028,+0.00056,2,paired,0.4044,T3-down,4,0.8089,0,0
+(5),XRE,A + masked DNS,scientific,n20,5,+0.00018,-0.00018,+0.00054,3,paired,0.2326,T3-down,4,0.2326,0,0
+(5),XRE,A + masked DNS,sports,n20,5,+0.00008,-0.00022,+0.00038,3,paired,0.4954,T3-down,4,0.4954,0,0
+(6),Exchange (masked view),Exchange (full view),baby,r20,5,+0.00082,+0.00017,+0.00147,5,paired,0.02526,T3-dagger,3,0.05053,0,1
+(6),Exchange (masked view),Exchange (full view),pantry,r20,5,+0.00374,+0.00130,+0.00618,5,paired,0.01314,T3-dagger,3,0.01314,1,1
+(6),Exchange (masked view),Exchange (full view),scientific,r20,5,+0.00142,-0.00030,+0.00314,5,paired,0.0841,T3-dagger,3,0.1448,0,0
+(6),Exchange (masked view),Exchange (full view),sports,r20,5,-0.00024,-0.00085,+0.00037,1,paired,0.3375,T3-dagger,3,0.3375,0,0
+(6),Exchange (masked view),Exchange (full view),baby,n20,5,+0.00016,-0.00031,+0.00063,2,paired,0.3977,T3-dagger,3,0.3977,0,0
+(6),Exchange (masked view),Exchange (full view),pantry,n20,5,+0.00166,+0.00119,+0.00213,5,paired,0.0006039,T3-dagger,3,0.001208,1,1
+(6),Exchange (masked view),Exchange (full view),scientific,n20,5,+0.00072,+0.00005,+0.00139,4,paired,0.03974,T3-dagger,3,0.03974,1,1
+(6),Exchange (masked view),Exchange (full view),sports,n20,5,-0.00012,-0.00055,+0.00031,2,paired,0.4852,T3-dagger,3,0.4852,0,0
+(7),XRE,XRE on full view,baby,r20,5,-0.00018,-0.00097,+0.00061,1,paired,0.5624,S6,3,0.5624,0,0
+(7),XRE,XRE on full view,pantry,r20,5,+0.00034,-0.00081,+0.00149,3,paired,0.4567,S6,3,0.9133,0,0
+(7),XRE,XRE on full view,scientific,r20,5,-0.00004,-0.00157,+0.00149,3,paired,0.9457,S6,3,0.9457,0,0
+(7),XRE,XRE on full view,sports,r20,5,-0.00142,-0.00189,-0.00095,0,paired,0.001086,S6,3,0.003259,1,1
+(7),XRE,XRE on full view,baby,n20,5,-0.00010,-0.00040,+0.00020,2,paired,0.413,S6,3,0.7817,0,0
+(7),XRE,XRE on full view,pantry,n20,5,+0.00050,-0.00025,+0.00125,4,paired,0.1379,S6,3,0.4137,0,0
+(7),XRE,XRE on full view,scientific,n20,5,+0.00008,-0.00036,+0.00052,3,paired,0.6421,S6,3,0.6421,0,0
+(7),XRE,XRE on full view,sports,n20,5,-0.00068,-0.00090,-0.00046,0,paired,0.001051,S6,3,0.003152,1,1
+(9),A + masked DNS,A + masked BPR,baby,r20,5,+0.00140,+0.00120,+0.00160,5,paired,3.839e-05,datasets,4,0.0001536,1,1
+(9),A + masked DNS,A + masked BPR,pantry,r20,5,+0.00116,-0.00023,+0.00255,4,paired,0.0818,datasets,4,0.1636,0,0
+(9),A + masked DNS,A + masked BPR,scientific,r20,5,+0.00030,-0.00073,+0.00133,4,paired,0.4631,datasets,4,0.4631,0,0
+(9),A + masked DNS,A + masked BPR,sports,r20,5,+0.00134,+0.00068,+0.00200,5,paired,0.004889,datasets,4,0.01467,1,1
+(9),A + masked DNS,A + masked BPR,baby,n20,5,+0.00052,+0.00022,+0.00082,5,paired,0.008218,datasets,4,0.02465,1,1
+(9),A + masked DNS,A + masked BPR,pantry,n20,5,+0.00068,+0.00018,+0.00118,5,paired,0.01947,datasets,4,0.03152,1,1
+(9),A + masked DNS,A + masked BPR,scientific,n20,5,+0.00076,+0.00024,+0.00128,5,paired,0.01576,datasets,4,0.03152,1,1
+(9),A + masked DNS,A + masked BPR,sports,n20,5,+0.00070,+0.00045,+0.00095,5,paired,0.001439,datasets,4,0.005756,1,1
+(10),XRE,A + masked BPR,baby,r20,5,+0.00174,+0.00090,+0.00258,5,paired,0.004448,T3-down,4,0.01334,1,1
+(10),XRE,A + masked BPR,pantry,r20,5,+0.00216,+0.00137,+0.00295,5,paired,0.001602,T3-down,4,0.004805,1,1
+(10),XRE,A + masked BPR,scientific,r20,5,+0.00088,-0.00041,+0.00217,3,paired,0.1302,T3-down,4,0.2603,0,0
+(10),XRE,A + masked BPR,sports,r20,5,+0.00186,+0.00117,+0.00255,5,paired,0.001696,T3-down,4,0.005088,1,1
+(10),XRE,A + masked BPR,baby,n20,5,+0.00058,-0.00014,+0.00130,5,paired,0.08921,T3-down,4,0.1784,0,0
+(10),XRE,A + masked BPR,pantry,n20,5,+0.00082,+0.00017,+0.00147,4,paired,0.02526,T3-down,4,0.07579,0,1
+(10),XRE,A + masked BPR,scientific,n20,5,+0.00094,+0.00045,+0.00143,5,paired,0.005793,T3-down,4,0.01159,1,1
+(10),XRE,A + masked BPR,sports,n20,5,+0.00078,+0.00058,+0.00098,5,paired,0.000446,T3-down,4,0.001338,1,1
+(11),A,"A, single probe",baby,r20,5,-0.00058,-0.00141,+0.00025,1,paired,0.1244,datasets,4,0.4976,0,0
+(11),A,"A, single probe",pantry,r20,5,-0.00042,-0.00129,+0.00045,1,paired,0.2496,datasets,4,0.4992,0,0
+(11),A,"A, single probe",scientific,r20,5,+0.00132,-0.00082,+0.00346,4,paired,0.1623,datasets,4,0.4976,0,0
+(11),A,"A, single probe",sports,r20,5,-0.00016,-0.00075,+0.00043,2,paired,0.4909,datasets,4,0.4992,0,0
+(11),A,"A, single probe",baby,n20,5,-0.00024,-0.00084,+0.00036,2,paired,0.3285,datasets,4,0.4014,0,0
+(11),A,"A, single probe",pantry,n20,5,+0.00074,+0.00048,+0.00100,5,paired,0.001337,datasets,4,0.005347,1,1
+(11),A,"A, single probe",scientific,n20,5,+0.00132,+0.00053,+0.00211,5,paired,0.009623,datasets,4,0.02887,1,1
+(11),A,"A, single probe",sports,n20,5,-0.00024,-0.00068,+0.00020,1,paired,0.2007,datasets,4,0.4014,0,0
+(12),A + masked DNS,A + full-view DNS,baby,r20,5,-0.00014,-0.00189,+0.00161,2,paired,0.8354,datasets,4,1,0,0
+(12),A + masked DNS,A + full-view DNS,pantry,r20,5,+0.00038,-0.00282,+0.00358,3,paired,0.7583,datasets,4,1,0,0
+(12),A + masked DNS,A + full-view DNS,scientific,r20,5,+0.00118,-0.00072,+0.00308,4,paired,0.1591,datasets,4,0.4773,0,0
+(12),A + masked DNS,A + full-view DNS,sports,r20,5,-0.00048,-0.00096,+0.00000,1,paired,0.05122,datasets,4,0.2049,0,0
+(12),A + masked DNS,A + full-view DNS,baby,n20,5,-0.00008,-0.00055,+0.00039,1,paired,0.6597,datasets,4,0.6597,0,0
+(12),A + masked DNS,A + full-view DNS,pantry,n20,5,+0.00058,-0.00002,+0.00118,5,paired,0.05615,datasets,4,0.1277,0,0
+(12),A + masked DNS,A + full-view DNS,scientific,n20,5,+0.00050,+0.00003,+0.00097,5,paired,0.04255,datasets,4,0.1277,0,1
+(12),A + masked DNS,A + full-view DNS,sports,n20,5,-0.00046,-0.00069,-0.00023,0,paired,0.004796,datasets,4,0.01918,1,1
+TableII,XRE,MSCA,baby,r20,5,+0.00256,+0.00143,+0.00369,5,paired,0.003298,datasets,4,0.006597,1,1
+TableII,XRE,MSCA,pantry,r20,5,+0.00436,+0.00304,+0.00568,5,paired,0.0007821,datasets,4,0.003129,1,1
+TableII,XRE,MSCA,scientific,r20,5,+0.00430,+0.00284,+0.00576,5,paired,0.001205,datasets,4,0.003616,1,1
+TableII,XRE,MSCA,sports,r20,5,+0.00128,+0.00012,+0.00244,4,paired,0.0378,datasets,4,0.0378,1,1
+TableII,XRE,MSCA,baby,n20,5,+0.00092,+0.00053,+0.00131,5,paired,0.002723,datasets,4,0.005445,1,1
+TableII,XRE,MSCA,pantry,n20,5,+0.00264,+0.00186,+0.00342,5,paired,0.0007264,datasets,4,0.002179,1,1
+TableII,XRE,MSCA,scientific,n20,5,+0.00330,+0.00282,+0.00378,5,paired,4.471e-05,datasets,4,0.0001788,1,1
+TableII,XRE,MSCA,sports,n20,5,+0.00028,-0.00031,+0.00087,3,paired,0.2591,datasets,4,0.2591,0,0

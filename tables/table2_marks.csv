@@ -1,0 +1,65 @@
+row,label,dataset,metric,printed,mark,sig_vs_ours,setting,provisional
+Ours,MSCA + MES,baby,r20,0.1048,best,,mes,0
+Ours,MSCA + MES,baby,n20,0.0469,best,,mes,0
+Ours,MSCA + MES,pantry,r20,0.1124,second,,mes,0
+Ours,MSCA + MES,pantry,n20,0.0496,best,,mes,0
+Ours,MSCA + MES,scientific,r20,0.1404,best,,mes,0
+Ours,MSCA + MES,scientific,n20,0.0688,best,,mes,0
+Ours,MSCA + MES,sports,r20,0.1212,best,,mes,0
+Ours,MSCA + MES,sports,n20,0.0549,best,,mes,0
+MSCA,MSCA~\cite{msca2026},baby,r20,0.1040,second,,l010_k40/rep1,0
+MSCA,MSCA~\cite{msca2026},baby,n20,0.0465,second,,l010_k40/rep1,0
+MSCA,MSCA~\cite{msca2026},pantry,r20,0.1093,,lower,l010_k40/rep1,0
+MSCA,MSCA~\cite{msca2026},pantry,n20,0.0475,,lower,l010_k40/rep1,0
+MSCA,MSCA~\cite{msca2026},scientific,r20,0.1380,,,l010_k40/rep1,0
+MSCA,MSCA~\cite{msca2026},scientific,n20,0.0672,second,lower,l010_k40/rep1,0
+MSCA,MSCA~\cite{msca2026},sports,r20,0.1197,second,lower,l010_k40/rep1,0
+MSCA,MSCA~\cite{msca2026},sports,n20,0.0541,second,lower,l010_k40/rep1,0
+COHESION,COHESION~\cite{xu2025cohesion},baby,r20,0.1021,,lower,l010_k40/rep1,0
+COHESION,COHESION~\cite{xu2025cohesion},baby,n20,0.0444,,lower,l010_k40/rep1,0
+COHESION,COHESION~\cite{xu2025cohesion},pantry,r20,0.1107,,,l010_k40/rep1,0
+COHESION,COHESION~\cite{xu2025cohesion},pantry,n20,0.0471,,lower,l010_k40/rep1,0
+COHESION,COHESION~\cite{xu2025cohesion},scientific,r20,0.1304,,lower,l010_k40/rep1,0
+COHESION,COHESION~\cite{xu2025cohesion},scientific,n20,0.0627,,lower,l010_k40/rep1,0
+COHESION,COHESION~\cite{xu2025cohesion},sports,r20,0.1080,,lower,l010_k40/rep1,0
+COHESION,COHESION~\cite{xu2025cohesion},sports,n20,0.0487,,lower,l010_k40/rep1,0
+SMORE,SMORE~\cite{ong2025smore},baby,r20,0.1016,,lower,l010_k40/rep1,0
+SMORE,SMORE~\cite{ong2025smore},baby,n20,0.0448,,lower,l010_k40/rep1,0
+SMORE,SMORE~\cite{ong2025smore},pantry,r20,0.1108,,,l010_k40/rep1,0
+SMORE,SMORE~\cite{ong2025smore},pantry,n20,0.0479,,lower,l010_k40/rep1,0
+SMORE,SMORE~\cite{ong2025smore},scientific,r20,0.1384,second,,l010_k40/rep1,0
+SMORE,SMORE~\cite{ong2025smore},scientific,n20,0.0661,,lower,l010_k40/rep1,0
+SMORE,SMORE~\cite{ong2025smore},sports,r20,0.1097,,lower,l010_k40/rep1,0
+SMORE,SMORE~\cite{ong2025smore},sports,n20,0.0494,,lower,l010_k40/rep1,0
+PGL,PGL~\cite{yu2025pgl},baby,r20,0.1005,,lower,l010_k40/rep1,0
+PGL,PGL~\cite{yu2025pgl},baby,n20,0.0439,,lower,l010_k40/rep1,0
+PGL,PGL~\cite{yu2025pgl},pantry,r20,0.1138,best,,l010_k40/rep1,0
+PGL,PGL~\cite{yu2025pgl},pantry,n20,0.0492,second,,l010_k40/rep1,0
+PGL,PGL~\cite{yu2025pgl},scientific,r20,0.1359,,lower,l010_k40/rep1,0
+PGL,PGL~\cite{yu2025pgl},scientific,n20,0.0648,,lower,l010_k40/rep1,0
+PGL,PGL~\cite{yu2025pgl},sports,r20,0.1141,,lower,l010_k40/rep1,0
+PGL,PGL~\cite{yu2025pgl},sports,n20,0.0513,,lower,l010_k40/rep1,0
+DiffMM,DiffMM~\cite{jiang2024diffmm},baby,r20,0.0869,,lower,l010_k40/rep1,0
+DiffMM,DiffMM~\cite{jiang2024diffmm},baby,n20,0.0381,,lower,l010_k40/rep1,0
+DiffMM,DiffMM~\cite{jiang2024diffmm},pantry,r20,0.0977,,lower,l010_k40/rep1,0
+DiffMM,DiffMM~\cite{jiang2024diffmm},pantry,n20,0.0422,,lower,l010_k40/rep1,0
+DiffMM,DiffMM~\cite{jiang2024diffmm},scientific,r20,0.1233,,lower,l010_k40/rep1,0
+DiffMM,DiffMM~\cite{jiang2024diffmm},scientific,n20,0.0618,,lower,l010_k40/rep1,0
+DiffMM,DiffMM~\cite{jiang2024diffmm},sports,r20,0.0987,,lower,l010_k40/rep1,0
+DiffMM,DiffMM~\cite{jiang2024diffmm},sports,n20,0.0434,,lower,l010_k40/rep1,0
+LGMRec,LGMRec~\cite{guo2023lgmrec},baby,r20,0.0945,,lower,l010_k40/rep1,0
+LGMRec,LGMRec~\cite{guo2023lgmrec},baby,n20,0.0418,,lower,l010_k40/rep1,0
+LGMRec,LGMRec~\cite{guo2023lgmrec},pantry,r20,0.1021,,lower,l010_k40/rep1,0
+LGMRec,LGMRec~\cite{guo2023lgmrec},pantry,n20,0.0449,,lower,l010_k40/rep1,0
+LGMRec,LGMRec~\cite{guo2023lgmrec},scientific,r20,0.1272,,lower,l010_k40/rep1,0
+LGMRec,LGMRec~\cite{guo2023lgmrec},scientific,n20,0.0624,,lower,l010_k40/rep1,0
+LGMRec,LGMRec~\cite{guo2023lgmrec},sports,r20,0.1033,,lower,l010_k40/rep1,0
+LGMRec,LGMRec~\cite{guo2023lgmrec},sports,n20,0.0463,,lower,l010_k40/rep1,0
+FREEDOM,FREEDOM~\cite{zhou2023freedom},baby,r20,0.0971,,lower,l010_k40/rep1,0
+FREEDOM,FREEDOM~\cite{zhou2023freedom},baby,n20,0.0421,,lower,l010_k40/rep1,0
+FREEDOM,FREEDOM~\cite{zhou2023freedom},pantry,r20,0.1093,,lower,l010_k40/rep1,0
+FREEDOM,FREEDOM~\cite{zhou2023freedom},pantry,n20,0.0463,,lower,l010_k40/rep1,0
+FREEDOM,FREEDOM~\cite{zhou2023freedom},scientific,r20,0.1344,,lower,l010_k40/rep1,0
+FREEDOM,FREEDOM~\cite{zhou2023freedom},scientific,n20,0.0636,,lower,l010_k40/rep1,0
+FREEDOM,FREEDOM~\cite{zhou2023freedom},sports,r20,0.1043,,lower,l010_k40/rep1,0
+FREEDOM,FREEDOM~\cite{zhou2023freedom},sports,n20,0.0460,,lower,l010_k40/rep1,0

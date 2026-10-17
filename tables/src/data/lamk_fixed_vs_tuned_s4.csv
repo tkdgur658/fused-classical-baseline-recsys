@@ -1,0 +1,5 @@
+dataset,tuned_lam,tuned_K,fixed_lam,fixed_K,tuned_is_fixed,tuned_mean5,tuned_sd5,fixed_mean5,fixed_sd5,diff_tuned_minus_fixed,wins_tuned,paired_t,p_two_sided_post_hoc
+baby,0.3,40,0.1,40,0,0.10480,0.00120,0.10524,0.00090,-0.00044,3,-1.008,0.3705
+pantry,0.1,20,0.1,40,0,0.11236,0.00155,0.11272,0.00170,-0.00036,2,-0.558,0.6063
+scientific,0.2,40,0.1,40,0,0.14042,0.00182,0.13962,0.00189,+0.00080,4,1.262,0.2756
+sports,0.1,80,0.1,40,0,0.12116,0.00098,0.12114,0.00087,+0.00002,3,0.103,0.9226

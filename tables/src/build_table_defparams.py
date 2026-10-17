@@ -1,0 +1,89 @@
+"""revision log 29 (item 8f): operational parameters of Definition 1 (crediting rule) as a main-text table, tables/table_defparams.tex
+(tab:defparams).  Every value is read from the generator inputs or from the code constants named below; nothing is typed from a result.
+
+Sources
+  tables/macros_fspec.tex          RP3beta grid (alpha, beta, kept transitions) and the fusion weight grid of F (build_table_fspec.py,
+                                   = WS of TABLE_FUSION tf_fuse.py and of CLASSIC tf_fuse_ce.py)
+  tables/src/data/classic_e1a_*.json  EASE lambda grid (ease_lams), mix pool (mix_rankers) and number of weight vectors (mix_grid_n),
+                                   chosen mix weights (checked to lie in MIX_W)
+  tables/macros_sotafill.tex       re-evaluation gate tolerance (sfTol)
+  W1_GRID_CF / MIX_W / CBF_K       constants copied from HOST_A <RUN_ROOT>/W1/code/w1_classic.py lines 34-37 (sha256 1672385e...) and
+                                   study/CLASSIC/code/classic_ds.py line 3 (sha256 172539e6...), and the 10-NN text graph of F
+                                   (build_table_fspec.py caption, STEP1 f_standalone.py)
+  C_FILL                           the definition in build_table_cfill.py (asserted against its docstring)
+  sigtest.ALPHA, build_rev2.MIN_SEEDS  the test family
+Usage: python -s tables/src/build_table_defparams.py
+"""
+import json
+import re
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+import sigtest  # noqa: E402
+from numwords import num_word  # noqa: E402
+
+ROOT = HERE.parent
+DATA = HERE / 'data'
+DS9 = ['baby', 'pantry', 'scientific', 'sports', 'clothing', 'instruments', 'arts', 'office', 'microlens']
+W1_GRID_CF = dict(topK=[50, 200], shrink=[0, 10])     # w1_classic.py GRID['itemknn_cf']
+MIX_W = [0, 1, 2]                                      # classic_ds.py: w in {0,1,2}^4
+CBF_K = 10                                             # ItemKNN-CBF: 10-nearest-neighbor graph of the text features
+C_FILL = dict(list_len=20, head=18, slots=2, max_degree=2)
+OUT = ROOT / 'table_defparams.tex'
+
+
+def macro(path, name):
+    m = re.search(r'\\newcommand\{\\' + name + r'\}\{([^}]*)\}', path.read_text(encoding='utf-8'))
+    assert m, name
+    return m.group(1)
+
+
+def main():
+    fs = ROOT / 'macros_fspec.tex'
+    J = {d: json.load(open(DATA / f'classic_e1a_{d}.json', encoding='utf-8')) for d in DS9}
+    lams = {tuple(j['ease_lams']) for j in J.values()}
+    assert len(lams) == 1
+    lams = list(lams.pop())
+    ngrid = {j['mix_grid_n'] for j in J.values()}
+    assert len(ngrid) == 1
+    ngrid = ngrid.pop()
+    assert all(set(j['mix_w']) <= set(MIX_W) for j in J.values())
+    assert all(j['mix_rankers'] == ['rp3b', 'iknn', 'icf', 'ease'] for j in J.values())
+    assert all(j['icf_cfg']['topK'] in W1_GRID_CF['topK'] and j['icf_cfg']['shrink'] in W1_GRID_CF['shrink'] for j in J.values())
+    cf_doc = (HERE / 'build_table_cfill.py').read_text(encoding='utf-8')
+    assert 'the first 18 items of the learned ranking and fills the last two slots' in cf_doc and 'at most two training edges' in cf_doc
+    import build_rev2 as rv
+    tol = macro(ROOT / 'macros_sotafill.tex', 'sfTol')
+    g = lambda xs: '\\{' + ', '.join(f'{x:g}' for x in xs) + '\\}'   # noqa: E731
+    rows = [
+        ('Pool', 'RP3$\\beta$, ItemKNN-CBF, ItemKNN-CF, and EASE, each fixed by validation Recall@20 before any learned model is compared'),
+        ('F (preregistered)', 'z(RP3$\\beta$) + z(ItemKNN-CBF)'),
+        ('Mix (table completion)', f'$\\sum_r w_r\\,$z($r$) over the pool, $w_r\\in{g(MIX_W)}$, the best of {ngrid} weight vectors'),
+        ('RP3$\\beta$', f"$\\alpha\\in\\{{{macro(fs, 'fsAlphaGrid')}\\}}$, $\\beta\\in\\{{{macro(fs, 'fsBetaGrid')}\\}}$, {macro(fs, 'fsTopK')} transitions per item"),
+        ('ItemKNN-CBF', f'{CBF_K}-nearest-neighbor graph of the text features, no tuned parameter'),
+        ('ItemKNN-CF', f"neighbors $\\in{g(W1_GRID_CF['topK'])}$, shrinkage $\\in{g(W1_GRID_CF['shrink'])}$"),
+        ('EASE', f'$\\lambda\\in{g(lams)}$'),
+        ('z-score', 'per user over the items outside the training history, population standard deviation'),
+        ('Fusion', f"z($L$) + $w\\,$z(comparator), $w\\in\\{{{macro(fs, 'fsWGrid')}\\}}$ per model and seed by validation Recall@20, ties to the smaller $w$"),
+        ('Checkpoint gate', f'stored test Recall@20 and NDCG@20 reproduced within {tol}'),
+        ('C (coverage)', f"last {num_word(C_FILL['slots'])} of {C_FILL['list_len']} slots replaced by the {num_word(C_FILL['slots'])} best items with at most "
+                         f"{num_word(C_FILL['max_degree'])} training edges under ItemKNN-CBF or under F"),
+        ('Test family', f'two-sided paired $t$-test over seeds, Holm over the datasets of a contrast at level {sigtest.ALPHA:g}, '
+                        f'at least {num_word(rv.MIN_SEEDS)} seeds per tested cell'),
+    ]
+    L = ['% Generated by tables/src/build_table_defparams.py (revision log 29). Do not edit by hand.',
+         '\\begin{table}[t]',
+         '\\caption{Operational parameters of Definition~\\ref{def:credit}. $L$ is the learned score and z the per-user z-score. '
+         'Every classical setting is chosen on validation Recall@20 from the training interactions and the frozen item features alone.}',
+         '\\label{tab:defparams}', '\\centering', '\\footnotesize', '\\setlength{\\tabcolsep}{3pt}',
+         '\\begin{tabular}{@{}p{2.0cm}p{6.5cm}@{}}', '\\toprule', 'Part & Setting \\\\', '\\midrule']
+    L += [f'{a} & {b} \\\\' for a, b in rows]
+    L += ['\\bottomrule', '\\end{tabular}', '\\end{table}', '']
+    OUT.write_text('\n'.join(L), encoding='utf-8', newline='\n')
+    print('\n'.join(L))
+
+
+if __name__ == '__main__':
+    main()

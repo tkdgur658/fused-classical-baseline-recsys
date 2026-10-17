@@ -1,0 +1,82 @@
+{
+ "dataset": "sports",
+ "code_sha256": "515168ae18e9895989fee77ede8c8accf4bb7bc6f5904cfad85bb3d806360103",
+ "feat": "<RUN_ROOT>/feat/sports_feat.npz",
+ "feat_sha256": "0fc7d5c4feeecbccfe58db7a6aefc31de804613d6c63ea09b8385690e8afe807",
+ "classic_json": "<RUN_ROOT>/W1/classic/sports/classic__sports.json",
+ "n_users_test": 35598,
+ "n_items": 18357,
+ "text_dim": 384,
+ "knn": 10,
+ "rp3b_chosen": {
+  "alpha": 0.5,
+  "beta": 0.3,
+  "topK": 200
+ },
+ "rp3b_w1_valid_r20": 0.07084693016201178,
+ "rp3b_w1_test_r20": 0.07174326273011591,
+ "rankers": {
+  "rp3b": {
+   "valid_r20": 0.07086097589491813,
+   "test_r20": 0.07173483529037211,
+   "test_n20": 0.03752253073698398,
+   "test_r20_tieadj": 0.07174326273011591
+  },
+  "iknn": {
+   "valid_r20": 0.05540401770386601,
+   "test_r20": 0.055707048817616824,
+   "test_n20": 0.023892935979467782,
+   "test_r20_tieadj": 0.05570708404624453
+  },
+  "combo": {
+   "valid_r20": 0.08412503032280198,
+   "test_r20": 0.08544176505368144,
+   "test_n20": 0.04247227863285209,
+   "test_r20_tieadj": 0.08545581078658779
+  }
+ },
+ "gate_rp3b_tieadj_vs_w1": true,
+ "rp3b_grid": [
+  {
+   "cfg": {
+    "alpha": 0.5,
+    "beta": 0.3,
+    "topK": 200
+   },
+   "valid_r20": 0.07084693016201178,
+   "nnz": 1479671,
+   "sec": 4.1
+  },
+  {
+   "cfg": {
+    "alpha": 0.5,
+    "beta": 0.6,
+    "topK": 200
+   },
+   "valid_r20": 0.03758528695671619,
+   "nnz": 1479671,
+   "sec": 4.0
+  },
+  {
+   "cfg": {
+    "alpha": 1.0,
+    "beta": 0.3,
+    "topK": 200
+   },
+   "valid_r20": 0.04239159240278055,
+   "nnz": 1479671,
+   "sec": 4.2
+  },
+  {
+   "cfg": {
+    "alpha": 1.0,
+    "beta": 0.6,
+    "topK": 200
+   },
+   "valid_r20": 0.028782861441297308,
+   "nnz": 1479671,
+   "sec": 4.6
+  }
+ ],
+ "sec": 36.1
+}

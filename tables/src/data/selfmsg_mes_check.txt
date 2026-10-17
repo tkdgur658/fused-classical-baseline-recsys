@@ -1,0 +1,21 @@
+baby s1: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+baby s2: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+baby s3: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+baby s4: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+baby s5: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+pantry s1: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+pantry s2: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+pantry s3: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+pantry s4: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+pantry s5: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+scientific s1: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+scientific s2: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+scientific s3: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+scientific s4: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+scientific s5: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+sports s1: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+sports s2: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+sports s3: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+sports s4: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+sports s5: repro_ok=ok run_dir=ok r20=ok r20_json=ok n_pairs=ok
+cells 20, failing 0

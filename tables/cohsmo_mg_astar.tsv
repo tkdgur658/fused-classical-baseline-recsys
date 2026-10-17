@@ -1,0 +1,9 @@
+backbone	dataset	a_star	alpha2	yaml
+COHESION	baby	a03	0.3	<HOME>/P04_cohsmo_wt/models/plg2_c/configs/baby_mg_a03.yaml
+COHESION	pantry	a03	0.3	<HOME>/P04_cohsmo_wt/models/plg2_c/configs/pantry_mg_a03.yaml
+COHESION	scientific	a01	0.1	<HOME>/P04_cohsmo_wt/models/plg2_c/configs/scientific_mg_a01.yaml
+COHESION	sports	a02	0.2	<HOME>/P04_cohsmo_sports_wt/models/plg2_c/configs/sports_mg_a02.yaml
+SMORE	baby	a03	0.3	<HOME>/P04_cohsmo_wt/models/plg2_sm/configs/baby_mg_a03.yaml
+SMORE	pantry	a02	0.2	<HOME>/P04_cohsmo_wt/models/plg2_sm/configs/pantry_mg_a02.yaml
+SMORE	scientific	a03	0.3	<HOME>/P04_cohsmo_wt/models/plg2_sm/configs/scientific_mg_a03.yaml
+SMORE	sports	a03	0.3	<HOME>/P04_cohsmo_sports_wt/models/plg2_sm/configs/sports_mg_a03.yaml

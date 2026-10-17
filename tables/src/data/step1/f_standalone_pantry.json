@@ -1,0 +1,82 @@
+{
+ "dataset": "pantry",
+ "code_sha256": "515168ae18e9895989fee77ede8c8accf4bb7bc6f5904cfad85bb3d806360103",
+ "feat": "<RUN_ROOT>/feat/pantry_feat.npz",
+ "feat_sha256": "20845cb26896d65ee35527291e2dbd268108c3dca0433df2dc5aca0a97bdbe4d",
+ "classic_json": "<RUN_ROOT>/W1/classic/pantry/classic__pantry.json",
+ "n_users_test": 13099,
+ "n_items": 4898,
+ "text_dim": 512,
+ "knn": 10,
+ "rp3b_chosen": {
+  "alpha": 0.5,
+  "beta": 0.3,
+  "topK": 200
+ },
+ "rp3b_w1_valid_r20": 0.10643091728404491,
+ "rp3b_w1_test_r20": 0.09397663943812505,
+ "rankers": {
+  "rp3b": {
+   "valid_r20": 0.10639272893912778,
+   "test_r20": 0.09397663943812505,
+   "test_n20": 0.045533068883393,
+   "test_r20_tieadj": 0.09397663943812505
+  },
+  "iknn": {
+   "valid_r20": 0.09508897884365691,
+   "test_r20": 0.07588365524085808,
+   "test_n20": 0.0327512841583241,
+   "test_r20_tieadj": 0.07588661004436248
+  },
+  "combo": {
+   "valid_r20": 0.11975864966012373,
+   "test_r20": 0.1047408199099168,
+   "test_n20": 0.04960807770815374,
+   "test_r20_tieadj": 0.1047408199099168
+  }
+ },
+ "gate_rp3b_tieadj_vs_w1": true,
+ "rp3b_grid": [
+  {
+   "cfg": {
+    "alpha": 0.5,
+    "beta": 0.3,
+    "topK": 200
+   },
+   "valid_r20": 0.10643091728404491,
+   "nnz": 668739,
+   "sec": 1.0
+  },
+  {
+   "cfg": {
+    "alpha": 0.5,
+    "beta": 0.6,
+    "topK": 200
+   },
+   "valid_r20": 0.06392728939127779,
+   "nnz": 668739,
+   "sec": 0.9
+  },
+  {
+   "cfg": {
+    "alpha": 1.0,
+    "beta": 0.3,
+    "topK": 200
+   },
+   "valid_r20": 0.06766974719315665,
+   "nnz": 668739,
+   "sec": 1.0
+  },
+  {
+   "cfg": {
+    "alpha": 1.0,
+    "beta": 0.6,
+    "topK": 200
+   },
+   "valid_r20": 0.043229206446192624,
+   "nnz": 668739,
+   "sec": 0.9
+  }
+ ],
+ "sec": 5.5
+}

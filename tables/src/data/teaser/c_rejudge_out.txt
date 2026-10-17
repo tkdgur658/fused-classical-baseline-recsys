@@ -1,0 +1,21 @@
+mes__baby	learned_max=1.43	q2_ext mean=26.17 i=True ii=True iii=True -> 유지
+mes__pantry	learned_max=6.29	q2_fcombo mean=28.3 i=True ii=True iii=True -> 유지
+mes__scientific	learned_max=1.07	q2_ext mean=14.0 i=True ii=True iii=True -> 유지
+mes__sports	learned_max=3.02	q2_fcombo mean=97.16 i=True ii=True iii=True -> 유지
+native__arts	learned_max=0.95	q2_fcombo mean=71.58 i=True ii=True iii=True -> 유지
+native__baby	learned_max=1.43	q2_ext mean=26.17 i=True ii=True iii=True -> 유지
+native__clothing	learned_max=3.65	q2_ext mean=104.01 i=True ii=True iii=True -> 유지
+native__instruments	learned_max=0.13	q2_fcombo mean=33.41 i=True ii=True iii=True -> 유지
+native__office	learned_max=0.09	q2_fcombo mean=55.81 i=True ii=True iii=True -> 유지
+native__pantry	learned_max=6.29	q2_fcombo mean=27.95 i=True ii=True iii=True -> 유지
+native__scientific	learned_max=1.07	q2_ext mean=14.0 i=True ii=True iii=True -> 유지
+native__sports	learned_max=3.02	q2_fcombo mean=96.81 i=True ii=True iii=True -> 유지
+xre__arts	learned_max=0.95	q2_fcombo mean=71.58 i=True ii=True iii=True -> 유지
+xre__baby	learned_max=1.43	q2_ext mean=26.17 i=True ii=True iii=True -> 유지
+xre__clothing	learned_max=3.65	q2_ext mean=104.69 i=True ii=True iii=True -> 유지
+xre__instruments	learned_max=0.13	q2_fcombo mean=33.41 i=True ii=True iii=True -> 유지
+xre__office	learned_max=0.09	q2_fcombo mean=55.81 i=True ii=True iii=True -> 유지
+xre__pantry	learned_max=6.29	q2_fcombo mean=27.95 i=True ii=True iii=True -> 유지
+xre__scientific	learned_max=1.07	q2_ext mean=13.73 i=True ii=True iii=True -> 유지
+xre__sports	learned_max=3.02	q2_fcombo mean=96.98 i=True ii=True iii=True -> 유지
+유지 셀 20/20 -> 넘는다

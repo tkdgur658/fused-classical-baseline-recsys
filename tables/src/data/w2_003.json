@@ -1,0 +1,730 @@
+{
+ "group": "nd_low",
+ "frac_classA_collapse": 0.8181818181818182,
+ "frac_classB_survive": 0.7777777777777778,
+ "frac_P_survive_rel": 0.4166666666666667,
+ "z": {
+  "arts": {
+   "n": 10,
+   "frac_txt_linked": 1.0
+  },
+  "baby": {
+   "n": 2,
+   "frac_txt_linked": 1.0
+  },
+  "clothing": {
+   "n": 23,
+   "frac_txt_linked": 1.0
+  },
+  "instruments": {
+   "n": 3,
+   "frac_txt_linked": 1.0
+  },
+  "office": {
+   "n": 41,
+   "frac_txt_linked": 0.9512195121951219
+  },
+  "pantry": {
+   "n": 0,
+   "frac_txt_linked": null
+  },
+  "scientific": {
+   "n": 11,
+   "frac_txt_linked": 1.0
+  },
+  "sports": {
+   "n": 10,
+   "frac_txt_linked": 1.0
+  }
+ },
+ "z_ok": true,
+ "verdict": "OBSERVATION",
+ "detail": {
+  "arts": {
+   "n": 10,
+   "rnd": 0.0009518280450812662,
+   "models": {
+    "lgmrec": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "freedom": {
+     "hitT": 0.05,
+     "x_rnd": 52.53049671984717,
+     "hits": [
+      0,
+      1,
+      1,
+      0
+     ],
+     "collapse": false,
+     "survive": false
+    },
+    "native": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "mscaA5": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "xre": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    }
+   }
+  },
+  "baby": {
+   "n": 2,
+   "rnd": 0.0028409093201921904,
+   "models": {
+    "lightgcn": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "freedom": {
+     "hitT": 0.3,
+     "x_rnd": 105.59999147727274,
+     "hits": [
+      1,
+      0,
+      1,
+      1,
+      0
+     ],
+     "collapse": false,
+     "survive": false
+    },
+    "native": {
+     "hitT": 0.3,
+     "x_rnd": 105.59999147727274,
+     "hits": [
+      1,
+      1,
+      1,
+      0,
+      0
+     ],
+     "collapse": false,
+     "survive": false
+    },
+    "mes": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "xre": {
+     "hitT": 0.1,
+     "x_rnd": 35.19999715909091,
+     "hits": [
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     "collapse": false,
+     "survive": false
+    }
+   }
+  },
+  "clothing": {
+   "n": 23,
+   "rnd": 0.0008686408696874632,
+   "models": {
+    "lightgcn": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "lgmrec": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "diffmm": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "freedom": {
+     "hitT": 0.0782608695652174,
+     "x_rnd": 90.09577179274979,
+     "hits": [
+      3,
+      1,
+      1,
+      2,
+      2
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "mentor": {
+     "hitT": 0.14782608695652172,
+     "x_rnd": 170.180902275194,
+     "hits": [
+      5,
+      1,
+      4,
+      3,
+      4
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "smore": {
+     "hitT": 0.0782608695652174,
+     "x_rnd": 90.09577179274979,
+     "hits": [
+      1,
+      2,
+      3,
+      1,
+      2
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "cohesion": {
+     "hitT": 0.008695652173913044,
+     "x_rnd": 10.010641310305532,
+     "hits": [
+      0,
+      0,
+      1,
+      0,
+      0
+     ],
+     "collapse": false,
+     "survive": false
+    },
+    "pgl": {
+     "hitT": 0.17391304347826086,
+     "x_rnd": 200.2128262061106,
+     "hits": [
+      4,
+      4,
+      3,
+      5,
+      4
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "native": {
+     "hitT": 0.034782608695652174,
+     "x_rnd": 40.04256524122213,
+     "hits": [
+      0,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "xre": {
+     "hitT": 0.05217391304347826,
+     "x_rnd": 60.06384786183318,
+     "hits": [
+      1,
+      1,
+      2,
+      0,
+      2
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "xretn": {
+     "hitT": 0.33043478260869563,
+     "x_rnd": 380.4043697916102,
+     "hits": [
+      7,
+      10,
+      7,
+      5,
+      9
+     ],
+     "collapse": false,
+     "survive": true
+    }
+   }
+  },
+  "instruments": {
+   "n": 3,
+   "rnd": 0.002007897735573018,
+   "models": {
+    "lgmrec": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "diffmm": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "freedom": {
+     "hitT": 0.26666666666666666,
+     "x_rnd": 132.8088885914126,
+     "hits": [
+      0,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "mentor": {
+     "hitT": 0.3333333333333333,
+     "x_rnd": 166.01111073926575,
+     "hits": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "smore": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "cohesion": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "pgl": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "native": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "xre": {
+     "hitT": 0.06666666666666667,
+     "x_rnd": 33.20222214785315,
+     "hits": [
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     "collapse": false,
+     "survive": false
+    },
+    "xretn": {
+     "hitT": 0.3333333333333333,
+     "x_rnd": 166.01111073926575,
+     "hits": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    }
+   }
+  },
+  "office": {
+   "n": 41,
+   "rnd": 0.0007699300500957604,
+   "models": {
+    "native": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "mscaA5": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "xre": {
+     "hitT": 0.004878048780487805,
+     "x_rnd": 6.335703847227544,
+     "hits": [
+      0,
+      0,
+      0,
+      1,
+      0
+     ],
+     "collapse": false,
+     "survive": false
+    }
+   }
+  },
+  "pantry": {
+   "n": 0,
+   "rnd": NaN,
+   "models": {}
+  },
+  "scientific": {
+   "n": 11,
+   "rnd": 0.004566590050753363,
+   "models": {
+    "lightgcn": {
+     "hitT": 0.12121212121212122,
+     "x_rnd": 26.54324558696144,
+     "hits": [
+      2,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "freedom": {
+     "hitT": 0.2363636363636364,
+     "x_rnd": 51.75932889457481,
+     "hits": [
+      3,
+      3,
+      3,
+      2,
+      2
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "native": {
+     "hitT": 0.09090909090909091,
+     "x_rnd": 19.90743419022108,
+     "hits": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "mes": {
+     "hitT": 0.10909090909090909,
+     "x_rnd": 23.888921028265294,
+     "hits": [
+      1,
+      1,
+      1,
+      1,
+      2
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "xre": {
+     "hitT": 0.12727272727272726,
+     "x_rnd": 27.870407866309506,
+     "hits": [
+      1,
+      1,
+      1,
+      2,
+      2
+     ],
+     "collapse": false,
+     "survive": true
+    }
+   }
+  },
+  "sports": {
+   "n": 10,
+   "rnd": 0.001090269586869721,
+   "models": {
+    "lightgcn": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "lgmrec": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "diffmm": {
+     "hitT": 0.02,
+     "x_rnd": 18.34408685784046,
+     "hits": [
+      0,
+      1,
+      0,
+      0,
+      0
+     ],
+     "collapse": false,
+     "survive": false
+    },
+    "freedom": {
+     "hitT": 0.12,
+     "x_rnd": 110.06452114704274,
+     "hits": [
+      1,
+      1,
+      2,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "mentor": {
+     "hitT": 0.24000000000000005,
+     "x_rnd": 220.12904229408554,
+     "hits": [
+      3,
+      3,
+      2,
+      3,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "smore": {
+     "hitT": 0.1,
+     "x_rnd": 91.7204342892023,
+     "hits": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "cohesion": {
+     "hitT": 0.0,
+     "x_rnd": 0.0,
+     "hits": [
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "collapse": true,
+     "survive": false
+    },
+    "pgl": {
+     "hitT": 0.1,
+     "x_rnd": 91.7204342892023,
+     "hits": [
+      1,
+      0,
+      1,
+      1,
+      2
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "native": {
+     "hitT": 0.1,
+     "x_rnd": 91.7204342892023,
+     "hits": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "mes": {
+     "hitT": 0.1,
+     "x_rnd": 91.7204342892023,
+     "hits": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    },
+    "xre": {
+     "hitT": 0.1,
+     "x_rnd": 91.7204342892023,
+     "hits": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "collapse": false,
+     "survive": true
+    }
+   }
+  }
+ }
+}

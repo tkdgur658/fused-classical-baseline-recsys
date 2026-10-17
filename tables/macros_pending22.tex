@@ -1,0 +1,29 @@
+% revision log 22 (2026-10-16): fallbacks for the macros of the CLASSIC data step that the manuscript and the supplement use.
+% The names are those of the generators (read 2026-10-16 22:2x):
+%   tables/macros_plugincount.tex  <- tables/src/build_plugincount_classic.py   (\pc*)
+%   tables/macros_classic.tex      <- tables/src/build_table_classic.py          (\cl* E1a/E1b, \px* E6 via
+%                                     build_table_protocol_restored.macro_lines(), \pone* P1)
+% main.tex and supplement.tex \InputIfFileExists both generated files first and then input this file; \providecommand
+% defines only the names still missing, printing the name in red so that a missing number is visible in the PDF.
+% No number is typed here.
+\providecommand{\pendmacro}[1]{{\color{red}[#1]}}
+% plug-in minus backbone, common protocol (macros_plugincount.tex)
+\providecommand{\pcNCells}{\pendmacro{pcNCells}}
+\providecommand{\pcNUp}{\pendmacro{pcNUp}}
+\providecommand{\pcNDown}{\pendmacro{pcNDown}}
+\providecommand{\pcNDownDamrs}{\pendmacro{pcNDownDamrs}}
+% classical standalone results and learned against the best z-mix (macros_classic.tex, E1a)
+\providecommand{\clNDsDone}{\pendmacro{clNDsDone}}
+\providecommand{\clNEaseAboveF}{\pendmacro{clNEaseAboveF}}
+\providecommand{\clNMixAboveF}{\pendmacro{clNMixAboveF}}
+\providecommand{\clNLearnedAboveMix}{\pendmacro{clNLearnedAboveMix}}
+\providecommand{\clNLearnedBelowMix}{\pendmacro{clNLearnedBelowMix}}
+\providecommand{\clNLearnedMixPairs}{\pendmacro{clNLearnedMixPairs}}
+% protocol sensitivity (macros_classic.tex, E6 block)
+\providecommand{\pxMscaPantryLo}{\pendmacro{pxMscaPantryLo}}
+\providecommand{\pxMscaPantryHi}{\pendmacro{pxMscaPantryHi}}
+\providecommand{\pxPglPantryLo}{\pendmacro{pxPglPantryLo}}
+\providecommand{\pxPglPantryHi}{\pendmacro{pxPglPantryHi}}
+\providecommand{\pxTopScientificC}{\pendmacro{pxTopScientificC}}
+\providecommand{\pxTopScientificB}{\pendmacro{pxTopScientificB}}
+\providecommand{\pxTopScientificP}{\pendmacro{pxTopScientificP}}

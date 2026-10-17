@@ -1,0 +1,6 @@
+plugin,variant,backbone,metric,native,plugin_value,paper_text,location
+MG,MG,FREEDOM,recall@5,0.0374,0.0397,2402.11262.txt,"Table 3, Baby, FREEDOM / FREEDOM + MG"
+MDVT-D,MDVT (D),FREEDOM,recall@10,0.0627,0.0648,2505.16665.txt,"Table 2, Baby, FREEDOM / +MDVT (D)"
+MDVT-S,MDVT (S),FREEDOM,recall@10,0.0627,0.0652,2505.16665.txt,"Table 2, Baby, FREEDOM / +MDVT (S)"
+VI-MMRec,VI-MMRec-O,FREEDOM,recall@10,0.0627,0.0663,2512.08702.txt,"Table 3, Baby, FREEDOM / +VI-MMRec-O"
+DA-MRS,DA-MRS,LightGCN,recall@20,0.0738,0.0994,2406.12501v1.txt,"Table 2, Baby, LightGCN / DA-MRS +LightGCN"

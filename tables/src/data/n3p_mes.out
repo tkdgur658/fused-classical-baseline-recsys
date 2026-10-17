@@ -1,0 +1,9 @@
+[   7.1s] baby g_O 0.2813 N3 [0.1058,0.1305] above max 0.1368 n_ge 0 p 0.0050 repro True
+[  11.0s] pantry g_O 0.2886 N3 [0.2298,0.2911] inside max 0.3070 n_ge 7 p 0.0398 repro True
+[  13.1s] scientific g_O 0.1954 N3 [0.1524,0.2206] inside max 0.2275 n_ge 46 p 0.2338 repro True
+[  33.6s] sports g_O 0.3014 N3 [0.1137,0.1478] above max 0.1557 n_ge 0 p 0.0050 repro True
+[  58.9s] clothing g_O 0.3382 N3 [0.1438,0.2161] above max 0.2268 n_ge 0 p 0.0050 repro True
+[  68.8s] instruments g_O 0.1643 N3 [0.4807,0.5398] below max 0.5449 n_ge 200 p 1.0000 repro True
+[  97.2s] arts g_O 0.2507 N3 [0.1074,0.1411] above max 0.1632 n_ge 0 p 0.0050 repro True
+[ 160.8s] office g_O 0.2805 N3 [0.2157,0.2466] above max 0.2516 n_ge 0 p 0.0050 repro True
+done 160.8

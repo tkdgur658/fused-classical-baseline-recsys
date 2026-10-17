@@ -1,0 +1,82 @@
+{
+ "dataset": "clothing",
+ "code_sha256": "515168ae18e9895989fee77ede8c8accf4bb7bc6f5904cfad85bb3d806360103",
+ "feat": "<RUN_ROOT>/feat/clothing_feat.npz",
+ "feat_sha256": "5e90e008d0332b8b93752bc4b2eb5122679bf57c8115e8fcfd89ada9b8a1e5d6",
+ "classic_json": "<RUN_ROOT>/W1/classic/clothing/classic__clothing.json",
+ "n_users_test": 39387,
+ "n_items": 23033,
+ "text_dim": 384,
+ "knn": 10,
+ "rp3b_chosen": {
+  "alpha": 0.5,
+  "beta": 0.3,
+  "topK": 200
+ },
+ "rp3b_w1_valid_r20": 0.0396670169793756,
+ "rp3b_w1_test_r20": 0.04008264704120872,
+ "rankers": {
+  "rp3b": {
+   "valid_r20": 0.039641187089583765,
+   "test_r20": 0.040062106544702325,
+   "test_n20": 0.019324530551991126,
+   "test_r20_tieadj": 0.04008264704120872
+  },
+  "iknn": {
+   "valid_r20": 0.0731333649720427,
+   "test_r20": 0.07097737106877178,
+   "test_n20": 0.030307994395722418,
+   "test_r20_tieadj": 0.0709774901999089
+  },
+  "combo": {
+   "valid_r20": 0.082715792598495,
+   "test_r20": 0.08282869498879857,
+   "test_n20": 0.03758628327540773,
+   "test_r20_tieadj": 0.082858315591197
+  }
+ },
+ "gate_rp3b_tieadj_vs_w1": true,
+ "rp3b_grid": [
+  {
+   "cfg": {
+    "alpha": 0.5,
+    "beta": 0.3,
+    "topK": 200
+   },
+   "valid_r20": 0.0396670169793756,
+   "nnz": 1104229,
+   "sec": 5.2
+  },
+  {
+   "cfg": {
+    "alpha": 0.5,
+    "beta": 0.6,
+    "topK": 200
+   },
+   "valid_r20": 0.025375141422361802,
+   "nnz": 1104229,
+   "sec": 5.2
+  },
+  {
+   "cfg": {
+    "alpha": 1.0,
+    "beta": 0.3,
+    "topK": 200
+   },
+   "valid_r20": 0.027691895681381275,
+   "nnz": 1104229,
+   "sec": 5.3
+  },
+  {
+   "cfg": {
+    "alpha": 1.0,
+    "beta": 0.6,
+    "topK": 200
+   },
+   "valid_r20": 0.020263471751319748,
+   "nnz": 1104229,
+   "sec": 5.2
+  }
+ ],
+ "sec": 43.8
+}

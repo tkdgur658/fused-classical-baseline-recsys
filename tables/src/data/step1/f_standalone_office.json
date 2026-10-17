@@ -1,0 +1,82 @@
+{
+ "dataset": "office",
+ "code_sha256": "515168ae18e9895989fee77ede8c8accf4bb7bc6f5904cfad85bb3d806360103",
+ "feat": "<RUN_ROOT>/W2/feat/office_feat.npz",
+ "feat_sha256": "6a81ecfc38d516e04ab50a9932a9bb614d62622c91a8efeee1e0e171bb7aa651",
+ "classic_json": "<RUN_ROOT>/W1/classic/office/classic__office.json",
+ "n_users_test": 87344,
+ "n_items": 25986,
+ "text_dim": 512,
+ "knn": 10,
+ "rp3b_chosen": {
+  "alpha": 0.5,
+  "beta": 0.3,
+  "topK": 200
+ },
+ "rp3b_w1_valid_r20": 0.16767113220721058,
+ "rp3b_w1_test_r20": 0.0990352433571498,
+ "rankers": {
+  "rp3b": {
+   "valid_r20": 0.16769310166867366,
+   "test_r20": 0.09903370580692435,
+   "test_n20": 0.06331501063793628,
+   "test_r20_tieadj": 0.0990352433571498
+  },
+  "iknn": {
+   "valid_r20": 0.08700040139916279,
+   "test_r20": 0.04976873053672834,
+   "test_n20": 0.02210326010090492,
+   "test_r20_tieadj": 0.04976353240915252
+  },
+  "combo": {
+   "valid_r20": 0.1641263833935432,
+   "test_r20": 0.09670956219087745,
+   "test_n20": 0.06166219981228223,
+   "test_r20_tieadj": 0.09671337851865422
+  }
+ },
+ "gate_rp3b_tieadj_vs_w1": true,
+ "rp3b_grid": [
+  {
+   "cfg": {
+    "alpha": 0.5,
+    "beta": 0.3,
+    "topK": 200
+   },
+   "valid_r20": 0.16767113220721058,
+   "nnz": 2385662,
+   "sec": 12.1
+  },
+  {
+   "cfg": {
+    "alpha": 0.5,
+    "beta": 0.6,
+    "topK": 200
+   },
+   "valid_r20": 0.13478793936358424,
+   "nnz": 2385662,
+   "sec": 12.9
+  },
+  {
+   "cfg": {
+    "alpha": 1.0,
+    "beta": 0.3,
+    "topK": 200
+   },
+   "valid_r20": 0.13853719868655764,
+   "nnz": 2385662,
+   "sec": 13.0
+  },
+  {
+   "cfg": {
+    "alpha": 1.0,
+    "beta": 0.6,
+    "topK": 200
+   },
+   "valid_r20": 0.10532715223894025,
+   "nnz": 2385662,
+   "sec": 14.3
+  }
+ ],
+ "sec": 113.6
+}

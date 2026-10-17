@@ -1,0 +1,172 @@
+"""Build tables/appendix_babybuild.tex (supplementary Table tab:babybuild) and tables/macros_babybuild.tex: the build of the Baby item
+kNN cache behind every reported Baby run under the common protocol (revision log 20, author decision). Added 2026-10-17.
+Numbers are never typed by hand; counts 0-10 are spelled out.
+revision log 26 (2026-10-17): summary form (one line per table with models and run counts of each build, replaced cells, not-repeated COHESION
+backbone cell of tab:main); the run-level list stays in the audit CSVs, which the author checklist asks to publish as supplementary data.
+
+Sources (tables/src/data/):
+  baby_cache_audit.csv          study/AUDIT_BABYCACHE (run-level audit of tab:main, tab:sota, fusion cells, tab:transfer, tab:ctrl and the
+                                other MSCA variants): table, row/model, seed, run_dir, data_root, build, evidence
+  baby_cache_audit_g2m.csv      the same columns for the study runs on Baby (MES-F, MES-C, MES10), read from result.json data_root
+  baby_cache_cmp.json           AUDIT_BABYCACHE/cmp_out.json: edge sets of the cache files of the canonical (C) and canonical_v2 (V2)
+                                builds and of the COHESION overlay (CS)
+  cachefix_perseed.csv, cachefix_sota_perseed.csv   CACHEFIX re-runs (canonical) that replace the previous cells (PREREG_CACHEFIX)
+  cachefix_previous_perseed.csv the replaced runs (apply_cachefix.py), shown next to the new values
+Usage: python tables/src/build_table_babybuild.py
+"""
+import csv
+import json
+import statistics as st
+import sys
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+from numwords import num_word  # noqa: E402
+
+ROOT = HERE.parent
+DATA = HERE / 'data'
+BS = chr(92)
+NICE = {'Native': 'backbone', 'INA': 'INA-style', 'UltraGCN-LI': 'UltraGCN $\\mathcal{L}_I$', 'XRE': 'E + R + A', 'wo_masked': 'E + R + A, full view',
+        'A1': 'A', 'MSCA+MES': 'MSCA + MES'}
+# manuscript table (or block) of each audit table key; MSCA variants of the controlled comparison are merged into one group
+GROUP = [('tab:sota', 'Table~\\ref{tab:sota}, unfused'),
+         ('tab:fuse(fusion cells)', 'Table~\\ref{tab:sota}, fused; Table~\\ref{tab:classic_standalone}'),
+         ('tab:main', 'Table~\\ref{tab:main}'),
+         ('tab:transfer', 'Table~\\ref{tab:transfer}'),
+         ('ctrl', 'Table~\\ref{tab:ctrl}, other MSCA variants'),
+         ('supp:mesf', 'Section~\\ref{supp:mesf} (MES-F)'),
+         ('supp:mesc', 'Section~\\ref{supp:mesc} (MES-C)'),
+         ('tab:mes10', 'Section~\\ref{supp:mes10} (MES10)'),   # revision log 26: Table S10 was replaced by sentences
+         ('supp:msca10', 'MSCA10, seeds 6--10 of Table~\\ref{tab:sota}')]   # revision log 32: MSCA10 Baby runs (canonical, PREREG_MSCA10)
+
+
+def rd(p):
+    return list(csv.DictReader(open(DATA / p, newline='', encoding='utf-8')))
+
+
+def gkey(t):
+    return 'ctrl' if t.startswith('tab:ctrl') or t in ('tab:xmask', 'appendix:sens') else t
+
+
+def main():
+    rows = rd('baby_cache_audit.csv') + rd('baby_cache_audit_g2m.csv')
+    cmp_ = json.load(open(DATA / 'baby_cache_cmp.json', encoding='utf-8'))
+    new1 = rd('cachefix_perseed.csv')
+    new2 = rd('cachefix_sota_perseed.csv')
+    prev = rd('cachefix_previous_perseed.csv')
+    replaced = {('tab:main', 'MSCA', r['row']) for r in new1} | {('tab:sota', 'COHESION', 'Native')}
+    # ---- runs per (group, model, row): build, flags
+    cells = {}
+    for r in rows:
+        g = gkey(r['table'])
+        parts = r['row/model'].split('/')
+        model = parts[0]
+        row = parts[1] if len(parts) > 1 else 'Native'
+        if g in ('supp:mesf', 'supp:mesc', 'tab:mes10', 'supp:msca10'):
+            model, row = 'MSCA', parts[1]
+        if g == 'ctrl':
+            model, row = 'MSCA', 'variants'
+        c = cells.setdefault((g, model, row), dict(n=0, builds=set(), pod=False, nocache=False, own=False, freedomdsp=False))
+        c['n'] += 1
+        c['builds'].add(r['build'])
+        ev = r['evidence']
+        c['pod'] |= '<POD_ROOT>/' in r['data_root'] or 'pod copy' in ev
+        # the audit notes "reads no kNN cache" from the package name; it holds for the models without an item kNN graph only (MSCA-based
+        # packages such as MSCA + MES and the controlled variants read the MSCA caches), thus the mark is kept for these three models
+        c['nocache'] |= 'reads no kNN cache' in ev and model in ('DiffMM', 'LGMRec', 'MMGCN')
+        c['own'] |= 'own rebuild' in ev
+        c['freedomdsp'] |= 'mm_adj_freedomdsp' in ev
+    for (t, m, row) in replaced:            # CACHEFIX: the re-run replaces the previous runs in the table (not pooled)
+        c = cells[(t, m, row)]
+        c.update(builds={'canonical'}, pod=False, own=(m == 'COHESION'), refix=True)
+    # ---- table lines: one line per (group, model, build); row names listed unless every row of the model shares the build
+    L = ['% Generated by tables/src/build_table_babybuild.py from tables/src/data/baby_cache_audit.csv, baby_cache_audit_g2m.csv,',
+         '% baby_cache_cmp.json and the CACHEFIX per-seed files (revision log 20). Do not edit by hand.']
+    n_img = cmp_['image_adj_10_True.pt']['C-V2']['only_a']
+    n_e = cmp_['image_adj_10_True.pt']['C'][2]
+    n_txt = cmp_['text_adj_10_True.pt']['C-V2']['only_a']
+    fd = cmp_['mm_adj_freedomdsp_10_1.pt']['C-V2']
+    cs = cmp_['mm_adj_10.pt']['C-CS']
+    assert cmp_['image_adj_10_True.pt']['C-V2']['only_b'] == n_img and cmp_['text_adj_10_True.pt']['C'][2] == n_e
+    # revision log 26 (decision 2, page budget): summary form. One line per table or section, with the models and the run count of each build;
+    # the run-level list (tables/src/data/baby_cache_audit*.csv) is published as supplementary data instead of being printed.
+    cap = ('Build of the Baby item kNN cache by table, with the models and the number of runs of each build under the common protocol: '
+           'canonical, the build of the MSCA runs; v2, the second build, '
+           f'whose image graph differs in {n_img:,} of {n_e:,} edges and whose text graph differs in {n_txt} edges. '
+           '$^{r}$Contains cells replaced by the CACHEFIX build-correction re-run (bottom block). '
+           f'FREEDOM and PGL build their own item graph, which differs between the two builds in {num_word(min(fd["only_a"], fd["only_b"]))} to '
+           f'{num_word(max(fd["only_a"], fd["only_b"]))} edges, and COHESION uses its own rebuilt cache, {num_word(min(cs["only_a"], cs["only_b"]))} to '
+           f'{num_word(max(cs["only_a"], cs["only_b"]))} edges from the canonical build. '
+           'DiffMM, LGMRec, and MMGCN read no kNN cache, and the interaction and feature files are byte-identical in both builds. '
+           'The MSCA10 row counts the five new MSCA runs of seeds 6--10 on the canonical build, as fixed in the MSCA10 preregistration, whereas MSCA + MES on these seeds reuses the MES10 runs. '
+           'The build of every run is listed in the supplementary data.')
+    # table* (revision log 25): the one-column version was too tall for a top float and held the float queue of the supplement
+    L += ['\\begin{table*}[t]', f'\\caption{{{cap}}}', '\\label{tab:babybuild}', '\\centering', '\\footnotesize', '\\setlength{\\tabcolsep}{4pt}',
+          '\\begin{tabular}{@{}p{3.9cm}p{5.1cm}p{7.6cm}@{}}', '\\toprule', 'Source & Canonical build: models (runs) & Second build, v2: models (runs) \\\\']
+    n_runs = {'canonical': 0, 'canonical_v2': 0}
+    L.append('\\midrule')
+    for g, glab in GROUP:
+        keys = [k for k in cells if k[0] == g]
+        if not keys:
+            continue
+        per = {'canonical': {}, 'canonical_v2': {}}
+        for k in keys:
+            c = cells[k]
+            assert len(c['builds']) == 1, (k, c['builds'])
+            b = next(iter(c['builds']))
+            n_runs[b] = n_runs.get(b, 0) + c['n']
+            d = per[b].setdefault(k[1], dict(n=0, refix=False))
+            d['n'] += c['n']
+            d['refix'] |= bool(c.get('refix'))
+        cols = []
+        for b in ('canonical', 'canonical_v2'):
+            ms = sorted(per[b], key=lambda m: (m != 'MSCA', m != 'MSCA+MES', m))
+            if not ms:
+                cols.append('--')
+                continue
+            names = ', '.join(NICE.get(m, m) + ('$^{r}$' if per[b][m]['refix'] else '') for m in ms)
+            if g == 'ctrl':
+                names = 'MSCA variants'
+            elif g in ('supp:mesf', 'supp:mesc', 'tab:mes10', 'supp:msca10'):
+                names = {'supp:mesf': 'MES-F', 'supp:mesc': 'MES-C', 'tab:mes10': 'MES10 arms', 'supp:msca10': 'MSCA'}[g]
+            cols.append(f"{names} ({sum(v['n'] for v in per[b].values())})")
+        L += [f'{glab} & {cols[0]} & {cols[1]} \\\\']
+    # replaced cells: previous (canonical_v2 build) and new (canonical re-run) means over seeds 1-5
+    L += ['\\midrule', '\\multicolumn{3}{@{}l}{\\textit{Replaced cells, mean over seeds 1--5, five runs each: previous (v2) $\\rightarrow$ re-run (canonical)}} \\\\']
+    mac_lines = []
+
+    def mean(xs, k):
+        return st.mean(float(x[k]) for x in xs)
+    for tab, m, row, new, k20, kn in (('tab:main', 'MSCA', 'DA-MRS', [r for r in new1 if r['row'] == 'DA-MRS'], 'r20', 'n20'),
+                                      ('tab:main', 'MSCA', 'UltraGCN-LI', [r for r in new1 if r['row'] == 'UltraGCN-LI'], 'r20', 'n20'),
+                                      ('tab:sota', 'COHESION', 'Native', new2, 'test_r20', 'test_n20')):
+        old = [r for r in prev if r['table'] == tab and r['backbone'] == m and r['row'] == row]
+        assert len(old) == 5 and len(new) == 5
+        lab = f'Table~\\ref{{{tab}}}'
+        L.append(f"{lab} & {m} {NICE.get(row, row)} & R@20 {mean(old, 'r20'):.4f} $\\rightarrow$ {mean(new, k20):.4f}, "
+                 f"N@20 {mean(old, 'n20'):.4f} $\\rightarrow$ {mean(new, kn):.4f} \\\\")
+    # revision log 26 (decision 4 ii): the COHESION backbone row of tab:main (Baby) is outside the CACHEFIX range and keeps the previous run
+    # of tab:sota (same five runs, same means as the 'previous' line above); it was not re-run.
+    cmain = [r for r in csv.DictReader(open(ROOT / 'cohsmo_perseed.csv', newline='', encoding='utf-8'))
+             if (r['backbone'], r['row'], r['dataset']) == ('COHESION', 'Native', 'baby')]
+    assert sorted(int(r['seed']) for r in cmain) == [1, 2, 3, 4, 5]
+    cold = [r for r in prev if r['table'] == 'tab:sota' and r['backbone'] == 'COHESION' and r['row'] == 'Native']
+    assert abs(mean(cmain, 'r20') - mean(cold, 'r20')) < 5e-5 and abs(mean(cmain, 'n20') - mean(cold, 'n20')) < 5e-5
+    L += ['\\midrule',
+          '\\multicolumn{3}{@{}l}{\\textit{Not repeated}} \\\\',
+          f"Table~\\ref{{tab:main}} & COHESION backbone & R@20 {mean(cmain, 'r20'):.4f}, N@20 {mean(cmain, 'n20'):.4f}, "
+          'previous runs of Table~\\ref{tab:sota} \\\\']
+    L += ['\\bottomrule', '\\end{tabular}', '\\end{table*}', '']
+    (ROOT / 'appendix_babybuild.tex').write_text('\n'.join(L), encoding='utf-8', newline='\n')
+    M = ['% Generated by tables/src/build_table_babybuild.py (revision log 20). Do not edit by hand.',
+         f'\\newcommand{{\\bbImgDiff}}{{{n_img:,}}}', f'\\newcommand{{\\bbImgEdges}}{{{n_e:,}}}', f'\\newcommand{{\\bbTxtDiff}}{{{n_txt}}}',
+         f'\\newcommand{{\\bbNRunsCan}}{{{n_runs["canonical"]}}}', f'\\newcommand{{\\bbNRunsVtwo}}{{{n_runs["canonical_v2"]}}}',
+         f'\\newcommand{{\\bbNReplaced}}{{{num_word(len(replaced))}}}']
+    (ROOT / 'macros_babybuild.tex').write_text('\n'.join(M) + '\n', encoding='utf-8', newline='\n')
+    print('\n'.join(L))
+    print('\n'.join(M))
+
+
+if __name__ == '__main__':
+    main()

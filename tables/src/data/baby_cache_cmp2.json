@@ -1,0 +1,1 @@
+{"image_adj_40_True.pt": {"V2": ["sparse", [7050, 7050], 282000], "CS": ["sparse", [7050, 7050], 282000], "V2-CS": {"only_a": 0, "only_b": 0, "union": 282000, "shape_equal": true}}, "text_adj_15_True.pt": {"V2": ["sparse", [7050, 7050], 105750], "CS": ["sparse", [7050, 7050], 105750], "V2-CS": {"only_a": 0, "only_b": 0, "union": 105750, "shape_equal": true}}}

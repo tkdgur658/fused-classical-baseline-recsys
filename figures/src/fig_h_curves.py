@@ -1,0 +1,72 @@
+"""Hypothesis figure: training dynamics of MSCA and MSCA + XRE, validation Recall@20 per epoch (Baby, Pantry,
+Scientific, Sports).
+
+Data: tables/hyp_curves_epochs.csv and tables/hyp_curves_runs.csv (tables/src/collect_hyp_curves.py; the Table I runs,
+seeds 1-5, one run per seed). Line = mean over the runs still training at that epoch (drawn while >= 3 of the 5
+runs train, since early stopping ends runs at different epochs), band = min-max over those runs. Dots = the selected
+(best-validation) epoch and its validation Recall@20 of each seed; dotted vertical line = mean selected epoch.
+The y axis starts at 85% of the lowest selected value of the panel, so the first epochs (Recall@20 near 0.04) fall below it.
+Colors: MSCA = C_CTRL, MSCA + XRE = C_OURS (as fig_selfmsg.py).
+Usage: python -s figures/src/fig_h_curves.py
+"""
+import csv
+import statistics as st
+from collections import defaultdict
+
+from matplotlib.ticker import FuncFormatter, MaxNLocator
+
+from style import C_CTRL, C_OURS, COL, TABLES, plt, save, setup
+
+SRC = TABLES / 'hyp_curves_epochs.csv'
+RUNS = TABLES / 'hyp_curves_runs.csv'
+DATASETS = [('baby', 'Baby'), ('pantry', 'Pantry'), ('scientific', 'Scientific'), ('sports', 'Sports')]
+ARMS = [('msca', 'MSCA', C_CTRL), ('xre', 'MSCA + XRE', C_OURS)]
+MIN_RUNS = 3
+
+
+def main():
+    setup()
+    plt.rcParams['mathtext.fontset'] = 'stix'
+    cur = defaultdict(lambda: defaultdict(list))
+    with open(SRC, newline='', encoding='utf-8') as f:
+        for r in csv.DictReader(f):
+            cur[(r['dataset'], r['arm'])][int(r['epoch'])].append(float(r['val_r20']))
+    with open(RUNS, newline='', encoding='utf-8') as f:
+        runs = list(csv.DictReader(f))
+    fig, axes = plt.subplots(1, len(DATASETS), figsize=(COL, 1.3))
+    for ax, (ds, D) in zip(axes, DATASETS):
+        best = [(int(r['best_epoch']), float(r['best_val'])) for r in runs if r['dataset'] == ds]
+        lo = 0.85 * min(v for _, v in best)
+        for arm, lab, col in ARMS:
+            c = cur[(ds, arm)]
+            ep = [e for e in sorted(c) if len(c[e]) >= MIN_RUNS]
+            ax.fill_between(ep, [min(c[e]) for e in ep], [max(c[e]) for e in ep], color=col, alpha=0.18, lw=0)
+            ax.plot(ep, [st.mean(c[e]) for e in ep], color=col, lw=0.8, label=lab)
+            b = [(int(r['best_epoch']), float(r['best_val'])) for r in runs if r['dataset'] == ds and r['arm'] == arm]
+            ax.scatter([e for e, _ in b], [v for _, v in b], s=5, color=col, linewidths=0, zorder=4)
+            ax.axvline(st.mean(e for e, _ in b), color=col, lw=0.6, ls=':', zorder=1)
+        hi = max(v for _, v in best)
+        ax.set_ylim(lo, hi + 0.12 * (hi - lo))
+        ax.set_xlim(left=0)
+        ax.set_title(D, pad=2)
+        ax.set_xlabel('Epoch', labelpad=1)
+        ax.yaxis.set_major_locator(MaxNLocator(3))
+        ax.xaxis.set_major_locator(MaxNLocator(3, integer=True))
+        t = [y for y in ax.get_yticks() if lo <= y <= hi + 0.12 * (hi - lo)]
+        nd = 2 if len({f'{y:.2f}' for y in t}) == len(t) else 3   # 3 decimals when 2 would print a tick twice
+        ax.yaxis.set_major_formatter(FuncFormatter(lambda y, _, nd=nd: f'{y:.{nd}f}'.lstrip('0')))
+        ax.grid(lw=0.3, alpha=0.5)
+        ax.set_axisbelow(True)
+        ax.tick_params(length=2, pad=1.5, labelsize=6)
+    axes[0].set_ylabel('Val. Recall@20')
+    h, l = axes[0].get_legend_handles_labels()
+    h.append(plt.Line2D([], [], ls='', marker='o', ms=2.2, color='#555555'))
+    l.append('selected epoch')
+    fig.legend(h, l, loc='upper center', ncol=3, frameon=False, handlelength=1.5, columnspacing=1.2,
+               bbox_to_anchor=(0.54, 1.11))
+    fig.tight_layout(w_pad=0.3)
+    save(fig, 'fig_h_curves', [SRC, RUNS])
+
+
+if __name__ == '__main__':
+    main()

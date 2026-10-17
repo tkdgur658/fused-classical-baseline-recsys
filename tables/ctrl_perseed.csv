@@ -1,0 +1,441 @@
+row,label,dataset,seed,r20,n20,source
+MESsel,MES (validation-selected),baby,1,0.1041,0.0470,mes_perseed.csv row MES
+MESsel,MES (validation-selected),baby,2,0.1065,0.0475,mes_perseed.csv row MES
+MESsel,MES (validation-selected),baby,3,0.1049,0.0470,mes_perseed.csv row MES
+MESsel,MES (validation-selected),baby,4,0.1033,0.0464,mes_perseed.csv row MES
+MESsel,MES (validation-selected),baby,5,0.1052,0.0465,mes_perseed.csv row MES
+MESsel,MES (validation-selected),pantry,1,0.1121,0.0498,mes_perseed.csv row MES
+MESsel,MES (validation-selected),pantry,2,0.1115,0.0496,mes_perseed.csv row MES
+MESsel,MES (validation-selected),pantry,3,0.1110,0.0487,mes_perseed.csv row MES
+MESsel,MES (validation-selected),pantry,4,0.1150,0.0501,mes_perseed.csv row MES
+MESsel,MES (validation-selected),pantry,5,0.1122,0.0496,mes_perseed.csv row MES
+MESsel,MES (validation-selected),scientific,1,0.1405,0.0695,mes_perseed.csv row MES
+MESsel,MES (validation-selected),scientific,2,0.1387,0.0678,mes_perseed.csv row MES
+MESsel,MES (validation-selected),scientific,3,0.1387,0.0683,mes_perseed.csv row MES
+MESsel,MES (validation-selected),scientific,4,0.1412,0.0687,mes_perseed.csv row MES
+MESsel,MES (validation-selected),scientific,5,0.1430,0.0695,mes_perseed.csv row MES
+MESsel,MES (validation-selected),sports,1,0.1227,0.0554,mes_perseed.csv row MES
+MESsel,MES (validation-selected),sports,2,0.1206,0.0550,mes_perseed.csv row MES
+MESsel,MES (validation-selected),sports,3,0.1208,0.0546,mes_perseed.csv row MES
+MESsel,MES (validation-selected),sports,4,0.1202,0.0545,mes_perseed.csv row MES
+MESsel,MES (validation-selected),sports,5,0.1215,0.0550,mes_perseed.csv row MES
+MES,"E (MES, $\lambda=0.1$, $K=40$)",baby,1,0.1061,0.0471,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",baby,2,0.1062,0.0478,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",baby,3,0.1047,0.0468,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",baby,4,0.1041,0.0468,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",baby,5,0.1051,0.0471,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",pantry,1,0.1102,0.0489,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",pantry,2,0.1132,0.0497,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",pantry,3,0.1121,0.0485,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",pantry,4,0.1148,0.0498,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",pantry,5,0.1133,0.0498,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",scientific,1,0.1404,0.0693,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",scientific,2,0.1392,0.0681,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",scientific,3,0.1380,0.0675,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",scientific,4,0.1380,0.0685,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",scientific,5,0.1425,0.0698,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",sports,1,0.1226,0.0551,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",sports,2,0.1203,0.0548,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",sports,3,0.1208,0.0543,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",sports,4,0.1209,0.0550,mes_perseed.csv row MES_k40
+MES,"E (MES, $\lambda=0.1$, $K=40$)",sports,5,0.1211,0.0542,mes_perseed.csv row MES_k40
+wo_A1,E + R,baby,1,0.1052,0.0472,xre_perseed.csv
+wo_A1,E + R,baby,2,0.1064,0.0478,xre_perseed.csv
+wo_A1,E + R,baby,3,0.1064,0.0477,xre_perseed.csv
+wo_A1,E + R,baby,4,0.1036,0.0466,xre_perseed.csv
+wo_A1,E + R,baby,5,0.1060,0.0472,xre_perseed.csv
+wo_A1,E + R,pantry,1,0.1131,0.0497,xre_perseed.csv
+wo_A1,E + R,pantry,2,0.1157,0.0507,xre_perseed.csv
+wo_A1,E + R,pantry,3,0.1147,0.0502,xre_perseed.csv
+wo_A1,E + R,pantry,4,0.1167,0.0508,xre_perseed.csv
+wo_A1,E + R,pantry,5,0.1150,0.0507,xre_perseed.csv
+wo_A1,E + R,scientific,1,0.1416,0.0692,xre_perseed.csv
+wo_A1,E + R,scientific,2,0.1397,0.0682,xre_perseed.csv
+wo_A1,E + R,scientific,3,0.1393,0.0684,xre_perseed.csv
+wo_A1,E + R,scientific,4,0.1398,0.0693,xre_perseed.csv
+wo_A1,E + R,scientific,5,0.1418,0.0696,xre_perseed.csv
+wo_A1,E + R,sports,1,0.1224,0.0556,xre_perseed.csv
+wo_A1,E + R,sports,2,0.1213,0.0552,xre_perseed.csv
+wo_A1,E + R,sports,3,0.1217,0.0552,xre_perseed.csv
+wo_A1,E + R,sports,4,0.1213,0.0549,xre_perseed.csv
+wo_A1,E + R,sports,5,0.1232,0.0553,xre_perseed.csv
+xeo,E + A,baby,1,0.1054,0.0468,novctrl_perseed.csv
+xeo,E + A,baby,2,0.1068,0.0480,novctrl_perseed.csv
+xeo,E + A,baby,3,0.1052,0.0467,novctrl_perseed.csv
+xeo,E + A,baby,4,0.1047,0.0470,novctrl_perseed.csv
+xeo,E + A,baby,5,0.1063,0.0473,novctrl_perseed.csv
+xeo,E + A,pantry,1,0.1115,0.0494,novctrl_perseed.csv
+xeo,E + A,pantry,2,0.1128,0.0499,novctrl_perseed.csv
+xeo,E + A,pantry,3,0.1138,0.0501,novctrl_perseed.csv
+xeo,E + A,pantry,4,0.1157,0.0504,novctrl_perseed.csv
+xeo,E + A,pantry,5,0.1125,0.0492,novctrl_perseed.csv
+xeo,E + A,scientific,1,0.1434,0.0712,novctrl_perseed.csv
+xeo,E + A,scientific,2,0.1414,0.0701,novctrl_perseed.csv
+xeo,E + A,scientific,3,0.1405,0.0697,novctrl_perseed.csv
+xeo,E + A,scientific,4,0.1422,0.0700,novctrl_perseed.csv
+xeo,E + A,scientific,5,0.1438,0.0705,novctrl_perseed.csv
+xeo,E + A,sports,1,0.1221,0.0544,novctrl_perseed.csv
+xeo,E + A,sports,2,0.1204,0.0542,novctrl_perseed.csv
+xeo,E + A,sports,3,0.1202,0.0538,novctrl_perseed.csv
+xeo,E + A,sports,4,0.1211,0.0545,novctrl_perseed.csv
+xeo,E + A,sports,5,0.1219,0.0543,novctrl_perseed.csv
+XRE,E + R + A,baby,1,0.1061,0.0472,xre_perseed.csv
+XRE,E + R + A,baby,2,0.1077,0.0480,xre_perseed.csv
+XRE,E + R + A,baby,3,0.1065,0.0475,xre_perseed.csv
+XRE,E + R + A,baby,4,0.1049,0.0469,xre_perseed.csv
+XRE,E + R + A,baby,5,0.1074,0.0476,xre_perseed.csv
+XRE,E + R + A,pantry,1,0.1117,0.0501,xre_perseed.csv
+XRE,E + R + A,pantry,2,0.1129,0.0503,xre_perseed.csv
+XRE,E + R + A,pantry,3,0.1144,0.0505,xre_perseed.csv
+XRE,E + R + A,pantry,4,0.1161,0.0503,xre_perseed.csv
+XRE,E + R + A,pantry,5,0.1134,0.0496,xre_perseed.csv
+XRE,E + R + A,scientific,1,0.1444,0.0714,xre_perseed.csv
+XRE,E + R + A,scientific,2,0.1418,0.0702,xre_perseed.csv
+XRE,E + R + A,scientific,3,0.1403,0.0696,xre_perseed.csv
+XRE,E + R + A,scientific,4,0.1408,0.0703,xre_perseed.csv
+XRE,E + R + A,scientific,5,0.1440,0.0708,xre_perseed.csv
+XRE,E + R + A,sports,1,0.1220,0.0545,xre_perseed.csv
+XRE,E + R + A,sports,2,0.1207,0.0545,xre_perseed.csv
+XRE,E + R + A,sports,3,0.1197,0.0541,xre_perseed.csv
+XRE,E + R + A,sports,4,0.1208,0.0546,xre_perseed.csv
+XRE,E + R + A,sports,5,0.1218,0.0543,xre_perseed.csv
+xto,R + A,baby,1,0.1055,0.0471,novctrl_perseed.csv
+xto,R + A,baby,2,0.1062,0.0477,novctrl_perseed.csv
+xto,R + A,baby,3,0.1055,0.0471,novctrl_perseed.csv
+xto,R + A,baby,4,0.1035,0.0468,novctrl_perseed.csv
+xto,R + A,baby,5,0.1059,0.0472,novctrl_perseed.csv
+xto,R + A,pantry,1,0.1105,0.0493,novctrl_perseed.csv
+xto,R + A,pantry,2,0.1114,0.0497,novctrl_perseed.csv
+xto,R + A,pantry,3,0.1117,0.0490,novctrl_perseed.csv
+xto,R + A,pantry,4,0.1150,0.0501,novctrl_perseed.csv
+xto,R + A,pantry,5,0.1124,0.0497,novctrl_perseed.csv
+xto,R + A,scientific,1,0.1443,0.0712,novctrl_perseed.csv
+xto,R + A,scientific,2,0.1423,0.0690,novctrl_perseed.csv
+xto,R + A,scientific,3,0.1397,0.0693,novctrl_perseed.csv
+xto,R + A,scientific,4,0.1414,0.0700,novctrl_perseed.csv
+xto,R + A,scientific,5,0.1430,0.0698,novctrl_perseed.csv
+xto,R + A,sports,1,0.1209,0.0543,novctrl_perseed.csv
+xto,R + A,sports,2,0.1203,0.0545,novctrl_perseed.csv
+xto,R + A,sports,3,0.1197,0.0539,novctrl_perseed.csv
+xto,R + A,sports,4,0.1195,0.0539,novctrl_perseed.csv
+xto,R + A,sports,5,0.1202,0.0541,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",baby,1,0.1056,0.0471,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",baby,2,0.1070,0.0481,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",baby,3,0.1053,0.0469,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",baby,4,0.1044,0.0471,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",baby,5,0.1065,0.0472,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",pantry,1,0.1103,0.0493,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",pantry,2,0.1135,0.0502,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",pantry,3,0.1137,0.0501,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",pantry,4,0.1141,0.0503,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",pantry,5,0.1123,0.0505,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",scientific,1,0.1434,0.0715,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",scientific,2,0.1423,0.0701,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",scientific,3,0.1393,0.0696,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",scientific,4,0.1410,0.0702,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",scientific,5,0.1427,0.0706,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",sports,1,0.1213,0.0545,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",sports,2,0.1205,0.0547,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",sports,3,0.1206,0.0544,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",sports,4,0.1204,0.0547,novctrl_perseed.csv
+xmd,"E + R + A, matched DNS competitor",sports,5,0.1212,0.0544,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",baby,1,0.1069,0.0475,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",baby,2,0.1068,0.0477,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",baby,3,0.1064,0.0473,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",baby,4,0.1049,0.0472,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",baby,5,0.1074,0.0476,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",pantry,1,0.1118,0.0501,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",pantry,2,0.1137,0.0505,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",pantry,3,0.1148,0.0508,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",pantry,4,0.1170,0.0508,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",pantry,5,0.1132,0.0500,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",scientific,1,0.1455,0.0714,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",scientific,2,0.1419,0.0704,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",scientific,3,0.1408,0.0699,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",scientific,4,0.1410,0.0704,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",scientific,5,0.1437,0.0706,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",sports,1,0.1216,0.0545,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",sports,2,0.1216,0.0548,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",sports,3,0.1204,0.0542,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",sports,4,0.1218,0.0547,novctrl_perseed.csv
+xph,"E + R + A, history-free probes",sports,5,0.1213,0.0545,novctrl_perseed.csv
+MES_fv,"E, full view",baby,1,0.1043,0.0464,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",baby,2,0.1042,0.0475,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",baby,3,0.1041,0.0466,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",baby,4,0.1026,0.0457,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",baby,5,0.1051,0.0470,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",pantry,1,0.1121,0.0492,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",pantry,2,0.1112,0.0486,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",pantry,3,0.1045,0.0466,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",pantry,4,0.1139,0.0492,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",pantry,5,0.1112,0.0483,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",scientific,1,0.1417,0.0686,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",scientific,2,0.1393,0.0677,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",scientific,3,0.1378,0.0670,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",scientific,4,0.1387,0.0684,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",scientific,5,0.1411,0.0684,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",sports,1,0.1212,0.0543,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",sports,2,0.1191,0.0544,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",sports,3,0.1205,0.0541,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",sports,4,0.1189,0.0542,mes_perseed.csv row MES_fv
+MES_fv,"E, full view",sports,5,0.1218,0.0546,mes_perseed.csv row MES_fv
+wo_A1_masked,"E + R, full view",baby,1,0.1047,0.0468,xre_perseed.csv
+wo_A1_masked,"E + R, full view",baby,2,0.1055,0.0479,xre_perseed.csv
+wo_A1_masked,"E + R, full view",baby,3,0.1047,0.0470,xre_perseed.csv
+wo_A1_masked,"E + R, full view",baby,4,0.1032,0.0466,xre_perseed.csv
+wo_A1_masked,"E + R, full view",baby,5,0.1054,0.0474,xre_perseed.csv
+wo_A1_masked,"E + R, full view",pantry,1,0.1076,0.0480,xre_perseed.csv
+wo_A1_masked,"E + R, full view",pantry,2,0.1130,0.0492,xre_perseed.csv
+wo_A1_masked,"E + R, full view",pantry,3,0.1086,0.0479,xre_perseed.csv
+wo_A1_masked,"E + R, full view",pantry,4,0.1138,0.0494,xre_perseed.csv
+wo_A1_masked,"E + R, full view",pantry,5,0.1135,0.0493,xre_perseed.csv
+wo_A1_masked,"E + R, full view",scientific,1,0.1404,0.0692,xre_perseed.csv
+wo_A1_masked,"E + R, full view",scientific,2,0.1377,0.0676,xre_perseed.csv
+wo_A1_masked,"E + R, full view",scientific,3,0.1390,0.0677,xre_perseed.csv
+wo_A1_masked,"E + R, full view",scientific,4,0.1363,0.0678,xre_perseed.csv
+wo_A1_masked,"E + R, full view",scientific,5,0.1417,0.0688,xre_perseed.csv
+wo_A1_masked,"E + R, full view",sports,1,0.1230,0.0557,xre_perseed.csv
+wo_A1_masked,"E + R, full view",sports,2,0.1213,0.0555,xre_perseed.csv
+wo_A1_masked,"E + R, full view",sports,3,0.1224,0.0549,xre_perseed.csv
+wo_A1_masked,"E + R, full view",sports,4,0.1217,0.0555,xre_perseed.csv
+wo_A1_masked,"E + R, full view",sports,5,0.1227,0.0552,xre_perseed.csv
+wo_masked,"E + R + A, full view",baby,1,0.1061,0.0471,xre_perseed.csv
+wo_masked,"E + R + A, full view",baby,2,0.1070,0.0479,xre_perseed.csv
+wo_masked,"E + R + A, full view",baby,3,0.1074,0.0476,xre_perseed.csv
+wo_masked,"E + R + A, full view",baby,4,0.1056,0.0474,xre_perseed.csv
+wo_masked,"E + R + A, full view",baby,5,0.1074,0.0477,xre_perseed.csv
+wo_masked,"E + R + A, full view",pantry,1,0.1104,0.0491,xre_perseed.csv
+wo_masked,"E + R + A, full view",pantry,2,0.1121,0.0492,xre_perseed.csv
+wo_masked,"E + R + A, full view",pantry,3,0.1150,0.0500,xre_perseed.csv
+wo_masked,"E + R + A, full view",pantry,4,0.1152,0.0500,xre_perseed.csv
+wo_masked,"E + R + A, full view",pantry,5,0.1141,0.0500,xre_perseed.csv
+wo_masked,"E + R + A, full view",scientific,1,0.1436,0.0710,xre_perseed.csv
+wo_masked,"E + R + A, full view",scientific,2,0.1404,0.0698,xre_perseed.csv
+wo_masked,"E + R + A, full view",scientific,3,0.1418,0.0699,xre_perseed.csv
+wo_masked,"E + R + A, full view",scientific,4,0.1419,0.0706,xre_perseed.csv
+wo_masked,"E + R + A, full view",scientific,5,0.1438,0.0706,xre_perseed.csv
+wo_masked,"E + R + A, full view",sports,1,0.1228,0.0552,xre_perseed.csv
+wo_masked,"E + R + A, full view",sports,2,0.1222,0.0554,xre_perseed.csv
+wo_masked,"E + R + A, full view",sports,3,0.1213,0.0546,xre_perseed.csv
+wo_masked,"E + R + A, full view",sports,4,0.1226,0.0551,xre_perseed.csv
+wo_masked,"E + R + A, full view",sports,5,0.1232,0.0551,xre_perseed.csv
+A1,A,baby,1,0.1042,0.0466,xre_perseed.csv
+A1,A,baby,2,0.1061,0.0478,xre_perseed.csv
+A1,A,baby,3,0.1042,0.0461,xre_perseed.csv
+A1,A,baby,4,0.1027,0.0464,xre_perseed.csv
+A1,A,baby,5,0.1071,0.0473,xre_perseed.csv
+A1,A,pantry,1,0.1100,0.0486,xre_perseed.csv
+A1,A,pantry,2,0.1108,0.0493,xre_perseed.csv
+A1,A,pantry,3,0.1117,0.0493,xre_perseed.csv
+A1,A,pantry,4,0.1132,0.0496,xre_perseed.csv
+A1,A,pantry,5,0.1118,0.0494,xre_perseed.csv
+A1,A,scientific,1,0.1422,0.0704,xre_perseed.csv
+A1,A,scientific,2,0.1404,0.0693,xre_perseed.csv
+A1,A,scientific,3,0.1389,0.0689,xre_perseed.csv
+A1,A,scientific,4,0.1399,0.0691,xre_perseed.csv
+A1,A,scientific,5,0.1417,0.0697,xre_perseed.csv
+A1,A,sports,1,0.1195,0.0537,xre_perseed.csv
+A1,A,sports,2,0.1185,0.0536,xre_perseed.csv
+A1,A,sports,3,0.1180,0.0532,xre_perseed.csv
+A1,A,sports,4,0.1185,0.0536,xre_perseed.csv
+A1,A,sports,5,0.1195,0.0534,xre_perseed.csv
+mbpr,A + masked BPR,baby,1,0.1051,0.0469,xmask_perseed.csv
+mbpr,A + masked BPR,baby,2,0.1064,0.0478,xmask_perseed.csv
+mbpr,A + masked BPR,baby,3,0.1038,0.0459,xmask_perseed.csv
+mbpr,A + masked BPR,baby,4,0.1028,0.0466,xmask_perseed.csv
+mbpr,A + masked BPR,baby,5,0.1058,0.0471,xmask_perseed.csv
+mbpr,A + masked BPR,pantry,1,0.1103,0.0491,xmask_perseed.csv
+mbpr,A + masked BPR,pantry,2,0.1110,0.0494,xmask_perseed.csv
+mbpr,A + masked BPR,pantry,3,0.1118,0.0493,xmask_perseed.csv
+mbpr,A + masked BPR,pantry,4,0.1131,0.0492,xmask_perseed.csv
+mbpr,A + masked BPR,pantry,5,0.1115,0.0497,xmask_perseed.csv
+mbpr,A + masked BPR,scientific,1,0.1447,0.0711,xmask_perseed.csv
+mbpr,A + masked BPR,scientific,2,0.1399,0.0689,xmask_perseed.csv
+mbpr,A + masked BPR,scientific,3,0.1385,0.0687,xmask_perseed.csv
+mbpr,A + masked BPR,scientific,4,0.1409,0.0691,xmask_perseed.csv
+mbpr,A + masked BPR,scientific,5,0.1429,0.0698,xmask_perseed.csv
+mbpr,A + masked BPR,sports,1,0.1195,0.0535,xmask_perseed.csv
+mbpr,A + masked BPR,sports,2,0.1186,0.0538,xmask_perseed.csv
+mbpr,A + masked BPR,sports,3,0.1186,0.0534,xmask_perseed.csv
+mbpr,A + masked BPR,sports,4,0.1187,0.0537,xmask_perseed.csv
+mbpr,A + masked BPR,sports,5,0.1203,0.0537,xmask_perseed.csv
+mdns,A + masked DNS,baby,1,0.1065,0.0473,xmask_perseed.csv
+mdns,A + masked DNS,baby,2,0.1076,0.0484,xmask_perseed.csv
+mdns,A + masked DNS,baby,3,0.1053,0.0468,xmask_perseed.csv
+mdns,A + masked DNS,baby,4,0.1041,0.0469,xmask_perseed.csv
+mdns,A + masked DNS,baby,5,0.1074,0.0475,xmask_perseed.csv
+mdns,A + masked DNS,pantry,1,0.1113,0.0496,xmask_perseed.csv
+mdns,A + masked DNS,pantry,2,0.1131,0.0504,xmask_perseed.csv
+mdns,A + masked DNS,pantry,3,0.1137,0.0500,xmask_perseed.csv
+mdns,A + masked DNS,pantry,4,0.1146,0.0503,xmask_perseed.csv
+mdns,A + masked DNS,pantry,5,0.1108,0.0498,xmask_perseed.csv
+mdns,A + masked DNS,scientific,1,0.1436,0.0714,xmask_perseed.csv
+mdns,A + masked DNS,scientific,2,0.1410,0.0698,xmask_perseed.csv
+mdns,A + masked DNS,scientific,3,0.1389,0.0694,xmask_perseed.csv
+mdns,A + masked DNS,scientific,4,0.1415,0.0705,xmask_perseed.csv
+mdns,A + masked DNS,scientific,5,0.1434,0.0703,xmask_perseed.csv
+mdns,A + masked DNS,sports,1,0.1211,0.0544,xmask_perseed.csv
+mdns,A + masked DNS,sports,2,0.1195,0.0543,xmask_perseed.csv
+mdns,A + masked DNS,sports,3,0.1207,0.0543,xmask_perseed.csv
+mdns,A + masked DNS,sports,4,0.1200,0.0542,xmask_perseed.csv
+mdns,A + masked DNS,sports,5,0.1211,0.0544,xmask_perseed.csv
+add_ssm,BPR + $\mu$ SSM,baby,1,0.1025,0.0461,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,baby,2,0.1030,0.0465,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,baby,3,0.1028,0.0466,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,baby,4,0.0996,0.0454,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,baby,5,0.1044,0.0467,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,pantry,1,0.1072,0.0484,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,pantry,2,0.1080,0.0479,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,pantry,3,0.1092,0.0487,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,pantry,4,0.1105,0.0490,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,pantry,5,0.1102,0.0490,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,scientific,1,0.1334,0.0674,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,scientific,2,0.1319,0.0665,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,scientific,3,0.1333,0.0663,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,scientific,4,0.1331,0.0670,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,scientific,5,0.1354,0.0670,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,sports,1,0.1183,0.0547,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,sports,2,0.1178,0.0546,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,sports,3,0.1174,0.0543,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,sports,4,0.1165,0.0541,novctrl_perseed.csv
+add_ssm,BPR + $\mu$ SSM,sports,5,0.1173,0.0544,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,baby,1,0.1027,0.0464,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,baby,2,0.1030,0.0471,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,baby,3,0.1039,0.0467,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,baby,4,0.1000,0.0459,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,baby,5,0.1030,0.0465,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,pantry,1,0.1083,0.0493,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,pantry,2,0.1060,0.0481,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,pantry,3,0.1087,0.0490,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,pantry,4,0.1118,0.0496,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,pantry,5,0.1095,0.0491,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,scientific,1,0.1313,0.0643,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,scientific,2,0.1345,0.0656,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,scientific,3,0.1320,0.0644,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,scientific,4,0.1316,0.0637,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,scientific,5,0.1327,0.0639,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,sports,1,0.1165,0.0528,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,sports,2,0.1150,0.0528,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,sports,3,0.1147,0.0524,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,sports,4,0.1156,0.0526,novctrl_perseed.csv
+add_psl,BPR + $\mu$ PSL,sports,5,0.1150,0.0526,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,baby,1,0.1006,0.0453,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,baby,2,0.1000,0.0460,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,baby,3,0.0992,0.0459,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,baby,4,0.1000,0.0456,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,baby,5,0.1004,0.0451,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,pantry,1,0.1073,0.0488,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,pantry,2,0.1054,0.0475,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,pantry,3,0.1088,0.0483,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,pantry,4,0.1119,0.0494,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,pantry,5,0.1099,0.0489,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,scientific,1,0.1316,0.0661,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,scientific,2,0.1315,0.0662,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,scientific,3,0.1310,0.0659,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,scientific,4,0.1312,0.0654,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,scientific,5,0.1329,0.0659,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,sports,1,0.1187,0.0550,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,sports,2,0.1188,0.0547,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,sports,3,0.1176,0.0543,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,sports,4,0.1175,0.0543,novctrl_perseed.csv
+add_slk,BPR + $\mu$ SL@$K$,sports,5,0.1172,0.0541,novctrl_perseed.csv
+Native,Backbone (MSCA),baby,1,0.1038,0.0466,table1_perseed.csv
+Native,Backbone (MSCA),baby,2,0.1039,0.0466,table1_perseed.csv
+Native,Backbone (MSCA),baby,3,0.1033,0.0465,table1_perseed.csv
+Native,Backbone (MSCA),baby,4,0.1032,0.0462,table1_perseed.csv
+Native,Backbone (MSCA),baby,5,0.1056,0.0467,table1_perseed.csv
+Native,Backbone (MSCA),pantry,1,0.1089,0.0474,table1_perseed.csv
+Native,Backbone (MSCA),pantry,2,0.1084,0.0471,table1_perseed.csv
+Native,Backbone (MSCA),pantry,3,0.1089,0.0472,table1_perseed.csv
+Native,Backbone (MSCA),pantry,4,0.1110,0.0484,table1_perseed.csv
+Native,Backbone (MSCA),pantry,5,0.1095,0.0475,table1_perseed.csv
+Native,Backbone (MSCA),scientific,1,0.1399,0.0678,table1_perseed.csv
+Native,Backbone (MSCA),scientific,2,0.1359,0.0664,table1_perseed.csv
+Native,Backbone (MSCA),scientific,3,0.1372,0.0666,table1_perseed.csv
+Native,Backbone (MSCA),scientific,4,0.1360,0.0671,table1_perseed.csv
+Native,Backbone (MSCA),scientific,5,0.1408,0.0679,table1_perseed.csv
+Native,Backbone (MSCA),sports,1,0.1206,0.0545,table1_perseed.csv
+Native,Backbone (MSCA),sports,2,0.1200,0.0547,table1_perseed.csv
+Native,Backbone (MSCA),sports,3,0.1197,0.0540,table1_perseed.csv
+Native,Backbone (MSCA),sports,4,0.1186,0.0536,table1_perseed.csv
+Native,Backbone (MSCA),sports,5,0.1197,0.0538,table1_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),baby,1,0.1038,0.0466,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),baby,2,0.1056,0.0475,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),baby,3,0.1036,0.0468,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),baby,4,0.1034,0.0467,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),baby,5,0.1052,0.0471,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),pantry,1,0.1122,0.0501,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),pantry,2,0.1147,0.0505,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),pantry,3,0.1137,0.0499,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),pantry,4,0.1146,0.0500,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),pantry,5,0.1119,0.0499,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),scientific,1,0.1371,0.0681,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),scientific,2,0.1354,0.0682,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),scientific,3,0.1358,0.0677,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),scientific,4,0.1360,0.0680,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),scientific,5,0.1395,0.0687,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),sports,1,0.1216,0.0553,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),sports,2,0.1203,0.0552,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),sports,3,0.1208,0.0553,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),sports,4,0.1195,0.0551,xmask_perseed.csv
+mslk,A + masked SL@$K$ (Holm family only),sports,5,0.1208,0.0551,xmask_perseed.csv
+rep_ssm,SSM replacement (macros only),baby,1,0.0999,0.0452,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),baby,2,0.0980,0.0450,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),baby,3,0.1014,0.0462,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),baby,4,0.1005,0.0454,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),baby,5,0.0991,0.0445,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),pantry,1,0.1070,0.0489,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),pantry,2,0.1071,0.0483,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),pantry,3,0.1104,0.0490,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),pantry,4,0.1089,0.0492,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),pantry,5,0.1070,0.0487,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),scientific,1,0.1321,0.0659,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),scientific,2,0.1316,0.0667,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),scientific,3,0.1309,0.0656,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),scientific,4,0.1309,0.0656,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),scientific,5,0.1328,0.0661,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),sports,1,0.1173,0.0543,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),sports,2,0.1167,0.0537,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),sports,3,0.1160,0.0536,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),sports,4,0.1165,0.0539,topk_perseed.csv
+rep_ssm,SSM replacement (macros only),sports,5,0.1159,0.0540,topk_perseed.csv
+rep_psl,PSL replacement (macros only),baby,1,0.0994,0.0446,topk_perseed.csv
+rep_psl,PSL replacement (macros only),baby,2,0.0993,0.0450,topk_perseed.csv
+rep_psl,PSL replacement (macros only),baby,3,0.0993,0.0450,topk_perseed.csv
+rep_psl,PSL replacement (macros only),baby,4,0.0998,0.0452,topk_perseed.csv
+rep_psl,PSL replacement (macros only),baby,5,0.0983,0.0442,topk_perseed.csv
+rep_psl,PSL replacement (macros only),pantry,1,0.1086,0.0487,topk_perseed.csv
+rep_psl,PSL replacement (macros only),pantry,2,0.1089,0.0486,topk_perseed.csv
+rep_psl,PSL replacement (macros only),pantry,3,0.1121,0.0492,topk_perseed.csv
+rep_psl,PSL replacement (macros only),pantry,4,0.1115,0.0496,topk_perseed.csv
+rep_psl,PSL replacement (macros only),pantry,5,0.1107,0.0497,topk_perseed.csv
+rep_psl,PSL replacement (macros only),scientific,1,0.1316,0.0642,topk_perseed.csv
+rep_psl,PSL replacement (macros only),scientific,2,0.1327,0.0642,topk_perseed.csv
+rep_psl,PSL replacement (macros only),scientific,3,0.1302,0.0636,topk_perseed.csv
+rep_psl,PSL replacement (macros only),scientific,4,0.1308,0.0636,topk_perseed.csv
+rep_psl,PSL replacement (macros only),scientific,5,0.1295,0.0632,topk_perseed.csv
+rep_psl,PSL replacement (macros only),sports,1,0.1139,0.0515,topk_perseed.csv
+rep_psl,PSL replacement (macros only),sports,2,0.1123,0.0513,topk_perseed.csv
+rep_psl,PSL replacement (macros only),sports,3,0.1115,0.0508,topk_perseed.csv
+rep_psl,PSL replacement (macros only),sports,4,0.1122,0.0511,topk_perseed.csv
+rep_psl,PSL replacement (macros only),sports,5,0.1128,0.0514,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),baby,1,0.1008,0.0455,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),baby,2,0.1009,0.0463,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),baby,3,0.1011,0.0462,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),baby,4,0.1019,0.0466,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),baby,5,0.1019,0.0456,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),pantry,1,0.1076,0.0489,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),pantry,2,0.1064,0.0478,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),pantry,3,0.1105,0.0485,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),pantry,4,0.1124,0.0497,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),pantry,5,0.1108,0.0488,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),scientific,1,0.1303,0.0642,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),scientific,2,0.1331,0.0649,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),scientific,3,0.1269,0.0632,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),scientific,4,0.1309,0.0638,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),scientific,5,0.1287,0.0636,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),sports,1,0.1167,0.0544,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),sports,2,0.1157,0.0536,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),sports,3,0.1159,0.0538,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),sports,4,0.1157,0.0535,topk_perseed.csv
+rep_slk,SL@$K$ replacement (macros only),sports,5,0.1157,0.0536,topk_perseed.csv

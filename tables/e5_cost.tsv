@@ -1,0 +1,10 @@
+dataset	method	package	config	epoch_sec_mean_e1_3	epoch_sec	ratio_time	peak_alloc_mib	ratio_mem	peak_reserved_mib	n_batches	batch_size	gpu	torch	commit	others_start	others_end
+baby	MSCA	objx_s	baby_native	6.248	[6.81, 6.347, 6.205, 6.191]	1.00	778.7	1.00	920.0	464	256	GPU	2.10.0.dev20251021+cu128	7951ebc	449326, 736 MiB	449326, 1520 MiB
+baby	MSCA + XRE	xres	baby_xres_xre_l010_k40	9.324	[9.937, 9.327, 9.325, 9.321]	1.49	865.8	1.11	1014.0	464	256	GPU	2.10.0.dev20251021+cu128	7951ebc	449794, 1130 MiB	449794, 1616 MiB
+baby	MSCA + A + masked DNS	xmask	baby_xmask_mdns	9.052	[9.619, 9.099, 8.979, 9.079]	1.45	879.4	1.13	1016.0	464	256	GPU	2.10.0.dev20251021+cu128	7951ebc	450333, 1130 MiB	450333, 1618 MiB
+pantry	MSCA	objx_s	pantry_native	4.32	[4.941, 4.474, 4.344, 4.143]	1.00	196.1	1.00	214.0	393	256	GPU	2.10.0.dev20251021+cu128	7951ebc	447575, 626 MiB	447575, 816 MiB
+pantry	MSCA + XRE	xres	pantry_xres_xre_l010_k40	6.858	[7.43, 6.849, 6.934, 6.79]	1.59	244.7	1.25	272.0	393	256	GPU	2.10.0.dev20251021+cu128	7951ebc	447980, 822 MiB	447980, 874 MiB
+pantry	MSCA + A + masked DNS	xmask	pantry_xmask_mdns	6.7	[7.192, 6.636, 6.694, 6.77]	1.55	253.8	1.29	274.0	393	256	GPU	2.10.0.dev20251021+cu128	7951ebc	448498, 822 MiB	448498, 876 MiB
+scientific	MSCA	objx_s	scientific_native	1.675	[2.121, 1.685, 1.675, 1.665]	1.00	160.5	1.00	194.0	166	256	GPU	2.10.0.dev20251021+cu128	7951ebc	446695, 626 MiB	446695, 794 MiB
+scientific	MSCA + XRE	xres	scientific_xres_xre_l010_k40	2.693	[3.213, 2.68, 2.699, 2.699]	1.61	192.6	1.20	212.0	166	256	GPU	2.10.0.dev20251021+cu128	7951ebc	446930, 780 MiB	446930, 814 MiB
+scientific	MSCA + A + masked DNS	xmask	scientific_xmask_mdns	2.667	[3.229, 2.668, 2.655, 2.678]	1.59	202.7	1.26	232.0	166	256	GPU	2.10.0.dev20251021+cu128	7951ebc	447322, 780 MiB	447322, 834 MiB

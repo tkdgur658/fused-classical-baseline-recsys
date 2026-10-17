@@ -1,0 +1,82 @@
+{
+ "table": {
+  "baby": {
+   "vals": {
+    "0.1": 0.1077,
+    "0.2": 0.0988,
+    "0.5": 0.0891,
+    "1.0": 0.0843,
+    "2.0": 0.0821
+   },
+   "mes": 0.10450525903341536,
+   "mes_plus": 0.10906249617357872,
+   "mes_plus_w": "0.2"
+  },
+  "pantry": {
+   "vals": {
+    "0.1": 0.1382,
+    "0.2": 0.1391,
+    "0.5": 0.1347,
+    "1.0": 0.1321,
+    "2.0": 0.1295
+   },
+   "mes": 0.13090964637592606,
+   "mes_plus": 0.13954021232719774,
+   "mes_plus_w": "0.2"
+  },
+  "scientific": {
+   "vals": {
+    "0.1": 0.1996,
+    "0.2": 0.1954,
+    "0.5": 0.1853,
+    "1.0": 0.1791,
+    "2.0": 0.1758
+   },
+   "mes": 0.19192878338278932,
+   "mes_plus": 0.19572700296735904,
+   "mes_plus_w": "0.2"
+  },
+  "sports": {
+   "vals": {
+    "0.1": 0.1268,
+    "0.2": 0.1178,
+    "0.5": 0.1034,
+    "1.0": 0.0975,
+    "2.0": 0.0939
+   },
+   "mes": 0.12075440496835732,
+   "mes_plus": 0.12757629481949037,
+   "mes_plus_w": "0.1"
+  }
+ },
+ "detail": {
+  "baby": {
+   "best_small_alpha_val": 0.1077,
+   "beats_mes": true,
+   "ge_mes_plus": false
+  },
+  "pantry": {
+   "best_small_alpha_val": 0.1391,
+   "beats_mes": true,
+   "ge_mes_plus": false
+  },
+  "scientific": {
+   "best_small_alpha_val": 0.1996,
+   "beats_mes": true,
+   "ge_mes_plus": true
+  },
+  "sports": {
+   "best_small_alpha_val": 0.1268,
+   "beats_mes": true,
+   "ge_mes_plus": false
+  }
+ },
+ "verdict": {
+  "cond1_n_beats_mes": 4,
+  "cond1": true,
+  "cond2_all_ge_mes_plus": false,
+  "gate_pass": false
+ },
+ "cumulative_gpu_h": 4.105,
+ "cap": 12.0
+}

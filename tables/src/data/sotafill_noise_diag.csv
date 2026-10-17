@@ -1,0 +1,11 @@
+job,model,dataset,seed,n_draws,json_r20,json_n20,r20_mean,r20_sd,r20_min,r20_max,n20_mean,n20_sd,frac_pass_tol,frac_pass_4dp,json_inside_draw_range
+cohesion_scientific_s3,cohesion,scientific,3,20,0.1325,0.0637,0.13249,0.0003,0.13199,0.13318,0.06373,0.00013,0.85,0.1,1
+cohesion_scientific_s4,cohesion,scientific,4,20,0.1326,0.0632,0.13243,0.00024,0.13199,0.13294,0.06309,0.0001,0.9,0.0,1
+cohesion_scientific_s5,cohesion,scientific,5,20,0.1294,0.0619,0.12968,0.00033,0.12903,0.13021,0.06199,0.0001,0.7,0.05,1
+lgmrec_pantry_s1,lgmrec,pantry,1,20,0.1015,0.0444,0.10189,0.00022,0.10161,0.1026,0.04456,7e-05,0.85,0.0,0
+lgmrec_pantry_s3,lgmrec,pantry,3,20,0.0978,0.0435,0.09748,0.00046,0.09657,0.09818,0.04352,0.00015,0.7,0.0,1
+lgmrec_pantry_s5,lgmrec,pantry,5,20,0.1014,0.0449,0.10093,0.00021,0.10047,0.10123,0.04477,7e-05,0.65,0.0,0
+lgmrec_scientific_s2,lgmrec,scientific,2,20,0.1251,0.0628,0.12582,0.00042,0.12488,0.12666,0.06283,0.00016,0.3,0.0,1
+lgmrec_scientific_s4,lgmrec,scientific,4,20,0.1277,0.0622,0.12719,0.00028,0.12678,0.12784,0.06208,0.0001,0.5,0.05,1
+lgmrec_scientific_s5,lgmrec,scientific,5,20,0.1293,0.0619,0.12893,0.00025,0.12844,0.1295,0.0619,8e-05,0.65,0.0,1
+lgmrec_sports_s3,lgmrec,sports,3,20,0.1041,0.0466,0.10438,0.00025,0.10391,0.10483,0.04659,0.00012,0.75,0.05,1

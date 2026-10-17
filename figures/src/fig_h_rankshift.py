@@ -1,0 +1,107 @@
+"""Hypothesis figure H-c: which test targets MSCA + XRE moves into and out of the top 20 (rank shift of the targets).
+
+Hypothesis (as posed): the gain of XRE comes from test targets ranked just below the evaluation cutoff by MSCA (ranks
+21-40). Data: tables/hyp_rankshift_trans.csv (tables/src/collect_hyp_strat.py; MSCA and MSCA + XRE best-valid checkpoints,
+seeds 1-5, one run per seed). Unit = one held-out test target, rank under MSCA of seed s against the rank under the second
+model: MSCA + XRE of seed s, or (seed-pair control) MSCA of seed s mod 5 + 1, two runs of one method. Rank bins: top 20 =
+evaluation cutoff of Recall@20, 21-40 (40 = also the training list size K of XRE), >40.
+Definitions (fixed 2026-10-07; the first version subtracted targets leaving into an XRE rank bin from targets entering from
+the same MSCA rank bin, which is no flow of one cohort; NOTES_fix_rankshift_forest.md in <TOOLS>/hyp_figs_20261007):
+  recovered hit from bin b = MSCA rank in b, rank <= 20 under the second model (bins by the MSCA rank)
+  lost hit into bin b      = MSCA rank <= 20, rank in b under the second model (bins by the rank under the second model)
+  net gain = all recovered - all lost (top-20 hit rate of the second model minus that of MSCA), % of all test targets.
+  (a) recovered hits (up) and lost hits (down) of MSCA + XRE by bin, bar = mean over seeds 1-5, whisker = seed range, grey
+      tick = mean of the seed-pair control, number above a dataset = net gain (mean over seeds).
+  (b) the same four quantities of MSCA + XRE minus those of the control, paired by seed s, drawn as contributions to the
+      gain (recovered up, lost down), so the four bars of a dataset add up to the net gain minus the control net gain.
+Usage: python -s figures/src/fig_h_rankshift.py
+"""
+import csv
+import statistics as st
+
+from matplotlib.ticker import MultipleLocator
+
+from style import C_GREY, C_OURS, COL, TABLES, plt, save, setup
+
+SRC = TABLES / 'hyp_rankshift_trans.csv'
+DATASETS = [('baby', 'Baby'), ('pantry', 'Pantry'), ('scientific', 'Scientific'), ('sports', 'Sports')]
+SEEDS = ['1', '2', '3', '4', '5']
+C_LIGHT = '#9db7da'
+HATCH = '//////'
+
+
+def main():
+    setup()
+    plt.rcParams['hatch.linewidth'] = 0.5
+    n, N = {}, {}
+    for r in csv.DictReader(open(SRC, newline='', encoding='utf-8')):
+        n[(r['dataset'], r['seed'], r['pair'], r['msca_bin'], r['other_bin'])] = int(r['n_targets'])
+        N[(r['dataset'], r['seed'])] = int(r['n_all'])
+    pc = lambda ds, s, p, a, b: 100 * n[(ds, s, p, a, b)] / N[(ds, s)]   # noqa: E731
+    Q = {'rn': ('near', 'top'), 'rd': ('deep', 'top'), 'ln': ('top', 'near'), 'ld': ('top', 'deep')}
+    val = lambda ds, p, q: [pc(ds, s, p, *Q[q]) for s in SEEDS]   # noqa: E731
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(COL, 2.3), sharex=True, gridspec_kw=dict(height_ratios=[1.45, 1.0]))
+    col = {'rn': C_LIGHT, 'rd': C_OURS, 'ln': C_LIGHT, 'ld': C_OURS}
+    err = dict(ecolor='black', elinewidth=0.5, capsize=1.3, capthick=0.5)
+
+    # (a) recovered (up) and lost (down) hits of MSCA + XRE, one column per rank bin
+    w = 0.34
+    for j, (ds, D) in enumerate(DATASETS):
+        for q, off, sign in (('rn', -0.5, 1), ('rd', 0.5, 1), ('ln', -0.5, -1), ('ld', 0.5, -1)):
+            x = j + off * (w + 0.04)
+            y = [sign * v for v in val(ds, 'xre', q)]
+            m = st.mean(y)
+            ax1.bar(x, m, w, color=col[q] if sign > 0 else 'white', edgecolor=col[q] if sign < 0 else 'none',
+                    hatch=HATCH if sign < 0 else None, lw=0.6, zorder=2,
+                    yerr=[[m - min(y)], [max(y) - m]], error_kw=err)
+            c = sign * st.mean(val(ds, 'ctrl', q))
+            ax1.plot([x - w / 2, x + w / 2], [c, c], color=C_GREY, lw=1.1, solid_capstyle='butt', zorder=3)
+        net = st.mean(sum(val(ds, 'xre', q)[i] for q in ('rn', 'rd')) - sum(val(ds, 'xre', q)[i] for q in ('ln', 'ld'))
+                      for i in range(len(SEEDS)))
+        ax1.text(j, 1.58, f'net +{net:.2f}' if net >= 0 else f'net {net:.2f}', ha='center', va='bottom', fontsize=6.2)
+    ax1.axhline(0, color='black', lw=0.6, zorder=1)
+    ax1.set_ylim(-2.0, 2.55)
+    ax1.set_yticks([-2, -1, 0, 1, 2])
+    ax1.set_yticklabels(['2', '1', '0', '1', '2'])
+    ax1.set_ylabel('% of test targets', labelpad=2)
+    ax1.text(0.005, 0.97, '(a) Recovered (up) and lost (down)', transform=ax1.transAxes, ha='left', va='top', fontsize=6.6)
+    hs = [plt.Rectangle((0, 0), 1, 1, color=C_LIGHT, lw=0), plt.Rectangle((0, 0), 1, 1, color=C_OURS, lw=0),
+          plt.Rectangle((0, 0), 1, 1, facecolor='white', edgecolor=C_LIGHT, hatch=HATCH, lw=0.6),
+          plt.Rectangle((0, 0), 1, 1, facecolor='white', edgecolor=C_OURS, hatch=HATCH, lw=0.6),
+          plt.Line2D([], [], color=C_GREY, lw=1.1)]
+    hs = [hs[0], hs[1], hs[4], hs[2], hs[3]]   # legend columns: recovered + control | lost
+    ax1.legend(hs, ['Recovered from MSCA rank 21–40', 'Recovered from MSCA rank >40', 'MSCA seed pair (mean)',
+                    'Lost to XRE rank 21–40', 'Lost to XRE rank >40'],
+               loc='lower center', bbox_to_anchor=(0.5, 1.0), ncol=2, frameon=False, handlelength=1.3, handleheight=0.8,
+               handletextpad=0.4, columnspacing=0.9, labelspacing=0.25, borderaxespad=0.15, fontsize=6.2)
+
+    # (b) MSCA + XRE minus the seed-pair control, paired by seed, as contributions to the gain
+    w2 = 0.19
+    for j, (ds, D) in enumerate(DATASETS):
+        for k, (q, sign) in enumerate((('rn', 1), ('rd', 1), ('ln', -1), ('ld', -1))):
+            x = j + (k - 1.5) * (w2 + 0.015)
+            y = [sign * (a - b) for a, b in zip(val(ds, 'xre', q), val(ds, 'ctrl', q))]
+            m = st.mean(y)
+            ax2.bar(x, m, w2, color=col[q] if sign > 0 else 'white', edgecolor=col[q] if sign < 0 else 'none',
+                    hatch=HATCH if sign < 0 else None, lw=0.6, zorder=2, yerr=[[m - min(y)], [max(y) - m]], error_kw=err)
+    ax2.axhline(0, color='black', lw=0.6, zorder=1)
+    ax2.set_ylabel('Difference (%)', labelpad=2)
+    ax2.yaxis.set_major_locator(MultipleLocator(0.25))
+    lo, hi = ax2.get_ylim()
+    ax2.set_ylim(lo, hi + 0.12 * (hi - lo))
+    ax2.text(0.005, 0.97, '(b) MSCA + XRE minus the MSCA seed pair', transform=ax2.transAxes, ha='left', va='top',
+             fontsize=6.6)
+    ax2.set_xticks(range(len(DATASETS)))
+    ax2.set_xticklabels([D for _, D in DATASETS])
+    ax2.set_xlim(-0.55, len(DATASETS) - 0.45)
+    for ax in (ax1, ax2):
+        ax.grid(axis='y', lw=0.3, alpha=0.5)
+        ax.set_axisbelow(True)
+        ax.tick_params(length=2, pad=1.5)
+    ax2.tick_params(axis='x', length=0)
+    fig.tight_layout(h_pad=0.3)
+    save(fig, 'fig_h_rankshift', [SRC])
+
+
+if __name__ == '__main__':
+    main()

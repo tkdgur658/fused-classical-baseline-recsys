@@ -1,0 +1,41 @@
+family,contrast,a,b,dataset,metric,n,mean_a,mean_b,diff,ci_lo,ci_hi,t,p,m,p_holm,reject,wins_a
+cfill_native_q2_ext,fill - learned,MSCA + C(ItemKNN-CBF),MSCA,baby,R@20 all users,5,0.0988318,0.104064,-0.00523262,-0.00570258,-0.00476266,-30.9133,6.52451e-06,8,5.21961e-05,1,0
+cfill_native_q2_ext,fill - learned,MSCA + C(ItemKNN-CBF),MSCA,pantry,R@20 all users,5,0.10468,0.110131,-0.0054508,-0.00605997,-0.00484162,-24.8432,1.55827e-05,8,6.83497e-05,1,0
+cfill_native_q2_ext,fill - learned,MSCA + C(ItemKNN-CBF),MSCA,scientific,R@20 all users,5,0.136374,0.137701,-0.00132701,-0.00219363,-0.000460399,-4.25146,0.0131427,8,0.0170345,1,0
+cfill_native_q2_ext,fill - learned,MSCA + C(ItemKNN-CBF),MSCA,sports,R@20 all users,5,0.115368,0.119712,-0.00434336,-0.00479203,-0.0038947,-26.8777,1.13916e-05,8,6.83497e-05,1,0
+cfill_native_q2_ext,fill - learned,MSCA + C(ItemKNN-CBF),MSCA,clothing,R@20 all users,5,0.0939471,0.094641,-0.00069386,-0.00109346,-0.000294256,-4.82093,0.00851726,8,0.0170345,1,0
+cfill_native_q2_ext,fill - learned,MSCA + C(ItemKNN-CBF),MSCA,instruments,R@20 all users,5,0.136474,0.140954,-0.00447917,-0.00528315,-0.00367519,-15.4682,0.00010195,8,0.000305849,1,0
+cfill_native_q2_ext,fill - learned,MSCA + C(ItemKNN-CBF),MSCA,arts,R@20 all users,5,0.117057,0.121076,-0.00401917,-0.00444228,-0.00359606,-26.3739,1.22829e-05,8,6.83497e-05,1,0
+cfill_native_q2_ext,fill - learned,MSCA + C(ItemKNN-CBF),MSCA,office,R@20 all users,5,0.0839875,0.0870626,-0.0030752,-0.00337298,-0.00277741,-28.672,8.80657e-06,8,6.1646e-05,1,0
+cfill_native_q2_fcombo,fill - learned,MSCA + C(combination),MSCA,baby,R@20 all users,5,0.0987804,0.104064,-0.00528405,-0.00575401,-0.00481409,-31.2171,6.27504e-06,8,5.02003e-05,1,0
+cfill_native_q2_fcombo,fill - learned,MSCA + C(combination),MSCA,pantry,R@20 all users,5,0.104756,0.110131,-0.00537446,-0.00598363,-0.00476528,-24.4953,1.6482e-05,8,7.50189e-05,1,0
+cfill_native_q2_fcombo,fill - learned,MSCA + C(combination),MSCA,scientific,R@20 all users,5,0.135545,0.137701,-0.0021564,-0.00302301,-0.00128978,-6.90863,0.00230268,8,0.00439232,1,0
+cfill_native_q2_fcombo,fill - learned,MSCA + C(combination),MSCA,sports,R@20 all users,5,0.115469,0.119712,-0.00424297,-0.00469163,-0.0037943,-26.2564,1.25031e-05,8,7.50189e-05,1,0
+cfill_native_q2_fcombo,fill - learned,MSCA + C(combination),MSCA,clothing,R@20 all users,5,0.093634,0.094641,-0.00100699,-0.0014066,-0.000607388,-6.99657,0.00219616,8,0.00439232,1,0
+cfill_native_q2_fcombo,fill - learned,MSCA + C(combination),MSCA,instruments,R@20 all users,5,0.136835,0.140954,-0.00411859,-0.00492257,-0.00331461,-14.223,0.000141908,8,0.000425724,1,0
+cfill_native_q2_fcombo,fill - learned,MSCA + C(combination),MSCA,arts,R@20 all users,5,0.117123,0.121076,-0.00395321,-0.00437632,-0.0035301,-25.9411,1.31192e-05,8,7.50189e-05,1,0
+cfill_native_q2_fcombo,fill - learned,MSCA + C(combination),MSCA,office,R@20 all users,5,0.0840905,0.0870626,-0.00297216,-0.00326994,-0.00267437,-27.7113,1.00871e-05,8,7.06094e-05,1,0
+cfill_xre_q2_ext,fill - learned,E + R + A + C(ItemKNN-CBF),E + R + A,baby,R@20 all users,5,0.100327,0.105654,-0.00532745,-0.00619833,-0.00445657,-16.9844,7.04655e-05,8,0.000422793,1,0
+cfill_xre_q2_ext,fill - learned,E + R + A + C(ItemKNN-CBF),E + R + A,pantry,R@20 all users,5,0.10813,0.113978,-0.00584777,-0.00699627,-0.00469928,-14.1368,0.000145344,8,0.000436033,1,0
+cfill_xre_q2_ext,fill - learned,E + R + A + C(ItemKNN-CBF),E + R + A,scientific,R@20 all users,5,0.140758,0.142464,-0.00170616,-0.00345183,3.95122e-05,-2.7136,0.0533383,8,0.0533383,0,0
+cfill_xre_q2_ext,fill - learned,E + R + A + C(ItemKNN-CBF),E + R + A,sports,R@20 all users,5,0.117073,0.120993,-0.00392023,-0.0045721,-0.00326836,-16.6971,7.53835e-05,8,0.000422793,1,0
+cfill_xre_q2_ext,fill - learned,E + R + A + C(ItemKNN-CBF),E + R + A,clothing,R@20 all users,5,0.0957875,0.0964119,-0.000624384,-0.000831705,-0.000417064,-8.36178,0.00111851,8,0.00223703,1,0
+cfill_xre_q2_ext,fill - learned,E + R + A + C(ItemKNN-CBF),E + R + A,instruments,R@20 all users,5,0.134495,0.139551,-0.00505609,-0.00553505,-0.00457713,-29.3092,8.06808e-06,8,6.45447e-05,1,0
+cfill_xre_q2_ext,fill - learned,E + R + A + C(ItemKNN-CBF),E + R + A,arts,R@20 all users,5,0.130131,0.133846,-0.00371576,-0.00436064,-0.00307087,-15.9976,8.92696e-05,8,0.000422793,1,0
+cfill_xre_q2_ext,fill - learned,E + R + A + C(ItemKNN-CBF),E + R + A,office,R@20 all users,5,0.100918,0.104039,-0.00312099,-0.00342665,-0.00281534,-28.3497,9.21217e-06,8,6.45447e-05,1,0
+cfill_xre_q2_fcombo,fill - learned,E + R + A + C(combination),E + R + A,baby,R@20 all users,5,0.100276,0.105654,-0.00537888,-0.00624975,-0.004508,-17.1484,6.78385e-05,8,0.000407031,1,0
+cfill_xre_q2_fcombo,fill - learned,E + R + A + C(combination),E + R + A,pantry,R@20 all users,5,0.108207,0.113978,-0.00577143,-0.00691993,-0.00462294,-13.9522,0.000153055,8,0.000446791,1,0
+cfill_xre_q2_fcombo,fill - learned,E + R + A + C(combination),E + R + A,scientific,R@20 all users,5,0.140024,0.142464,-0.00244076,-0.00419571,-0.000685811,-3.86144,0.0181249,8,0.0181249,1,0
+cfill_xre_q2_fcombo,fill - learned,E + R + A + C(combination),E + R + A,sports,R@20 all users,5,0.117151,0.120993,-0.00384231,-0.00448407,-0.00320055,-16.623,7.67202e-05,8,0.000407031,1,0
+cfill_xre_q2_fcombo,fill - learned,E + R + A + C(combination),E + R + A,clothing,R@20 all users,5,0.095449,0.0964119,-0.000962905,-0.00115319,-0.000772617,-14.0495,0.00014893,8,0.000446791,1,0
+cfill_xre_q2_fcombo,fill - learned,E + R + A + C(combination),E + R + A,instruments,R@20 all users,5,0.134856,0.139551,-0.00469551,-0.00517447,-0.00421655,-27.219,1.08333e-05,8,8.42412e-05,1,0
+cfill_xre_q2_fcombo,fill - learned,E + R + A + C(combination),E + R + A,arts,R@20 all users,5,0.130197,0.133846,-0.0036498,-0.00429468,-0.00300491,-15.7136,9.58102e-05,8,0.000407031,1,0
+cfill_xre_q2_fcombo,fill - learned,E + R + A + C(combination),E + R + A,office,R@20 all users,5,0.101021,0.104039,-0.00301795,-0.00332361,-0.0027123,-27.4138,1.05302e-05,8,8.42412e-05,1,0
+cfill_mes_q2_ext,fill - learned,MES + C(ItemKNN-CBF),MES,baby,R@20 all users,5,0.0993086,0.104792,-0.0054829,-0.00636187,-0.00460394,-17.3192,6.52295e-05,4,0.000167385,1,0
+cfill_mes_q2_ext,fill - learned,MES + C(ItemKNN-CBF),MES,pantry,R@20 all users,5,0.107489,0.11236,-0.0048706,-0.00562119,-0.00412002,-18.0166,5.57951e-05,4,0.000167385,1,0
+cfill_mes_q2_ext,fill - learned,MES + C(ItemKNN-CBF),MES,scientific,R@20 all users,5,0.139242,0.14045,-0.00120853,-0.00227652,-0.000140541,-3.14181,0.0347871,4,0.0347871,1,0
+cfill_mes_q2_ext,fill - learned,MES + C(ItemKNN-CBF),MES,sports,R@20 all users,5,0.116776,0.121166,-0.00438964,-0.00469816,-0.00408111,-39.5027,2.45352e-06,4,9.81407e-06,1,0
+cfill_mes_q2_fcombo,fill - learned,MES + C(combination),MES,baby,R@20 all users,5,0.0992572,0.104792,-0.00553433,-0.0064133,-0.00465537,-17.4817,6.2864e-05,4,0.000178188,1,0
+cfill_mes_q2_fcombo,fill - learned,MES + C(combination),MES,pantry,R@20 all users,5,0.107565,0.11236,-0.00479426,-0.00554484,-0.00404367,-17.7342,5.9396e-05,4,0.000178188,1,0
+cfill_mes_q2_fcombo,fill - learned,MES + C(combination),MES,scientific,R@20 all users,5,0.138483,0.14045,-0.00196682,-0.00311396,-0.000819693,-4.76038,0.00890274,4,0.00890274,1,0
+cfill_mes_q2_fcombo,fill - learned,MES + C(combination),MES,sports,R@20 all users,5,0.116877,0.121166,-0.00428925,-0.00459028,-0.00398821,-39.56,2.43938e-06,4,9.75753e-06,1,0

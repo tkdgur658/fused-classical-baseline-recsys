@@ -1,0 +1,16 @@
+table,backbone,row,dataset,seed,r20,n20,gpu,root,fingerprint,data
+tab:main,MSCA,DA-MRS,baby,1,0.1026,0.0461,GPU,qfixE,b70f660207,canonical_v2
+tab:main,MSCA,DA-MRS,baby,2,0.1027,0.0466,GPU,qfixE,b70f660207,canonical_v2
+tab:main,MSCA,DA-MRS,baby,3,0.1023,0.046,GPU,qfixA,b70f660207,canonical_v2
+tab:main,MSCA,DA-MRS,baby,4,0.1018,0.0458,GPU,qfixE,b70f660207,canonical_v2
+tab:main,MSCA,DA-MRS,baby,5,0.1008,0.0453,GPU,qfixA,b70f660207,canonical_v2
+tab:main,MSCA,UltraGCN-LI,baby,1,0.1028,0.0463,GPU,qfixE,c67867bd43,canonical_v2
+tab:main,MSCA,UltraGCN-LI,baby,2,0.1042,0.0473,GPU,qfixE,c67867bd43,canonical_v2
+tab:main,MSCA,UltraGCN-LI,baby,3,0.1045,0.0468,GPU,qfixE,c67867bd43,canonical_v2
+tab:main,MSCA,UltraGCN-LI,baby,4,0.1034,0.0464,GPU,qfixE,c67867bd43,canonical_v2
+tab:main,MSCA,UltraGCN-LI,baby,5,0.1052,0.0466,GPU,qfixE,c67867bd43,canonical_v2
+tab:sota,COHESION,Native,baby,1,0.1014,0.044,GPU,qt2s123,819beee84a,canonical_v2
+tab:sota,COHESION,Native,baby,2,0.1033,0.0447,GPU,qt2s123,819beee84a,canonical_v2
+tab:sota,COHESION,Native,baby,3,0.1006,0.0439,GPU,qt2s123,819beee84a,canonical_v2
+tab:sota,COHESION,Native,baby,4,0.1033,0.0452,GPU,q45,819beee84a,canonical_v2
+tab:sota,COHESION,Native,baby,5,0.1015,0.0438,GPU,q45,819beee84a,canonical_v2

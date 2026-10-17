@@ -1,0 +1,22 @@
+% revision log 22: layout placeholder for the first float of tables/appendix_classic.tex (build_table_classic.py, CLASSIC E1a),
+% used by supplement.tex only while that file is missing. The generated file carries tab:classic_standalone (this label),
+% tab:classic_lambda, tab:classic_fusion_a/b/c, and tab:classic_coverage.
+\begin{table*}[t]
+\caption{Standalone test Recall@20 of the training-free classical rankers, with configurations chosen on validation Recall@20. F: the classical part of the fused baseline. Best z-mix: the validation-selected z-score mix of the four rankers. The rankers are deterministic, thus each cell is a single value. {\color{red}[pending: tables/appendix\_classic.tex]}}
+\label{tab:classic_standalone}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{lccccccccc}
+\toprule
+Ranker & Baby & Pantry & Scientific & Sports & Clothing & Instruments & Arts & Office & MicroLens \\
+\midrule
+RP3$\beta$ & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+ItemKNN-CBF & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+ItemKNN-CF & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+EASE & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+F: RP3$\beta$ + CBF & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+Best z-mix & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,9 @@
+label	package	config	dataset	n_batches	train_sec_e0	train_sec_e1	train_sec_e2	mean_train_sec_excl_e0	peak_train_alloc_mib	valid_sec
+Native	objx_s	pantry_native	pantry@canonical_v2	393	5.03	4.366	4.473	4.419	196.1	1.1
+MES	xres0	pantry_xres_xeoa0_l010_k20	pantry@canonical_v2	393	7.37	6.964	7.123	7.043	243.5	1.02
+Native	objx_s	baby_native	baby	464	7.006	6.699	6.362	6.53	778.7	1.637
+MES	xres0	baby_xres_xeoa0_l030_k40	baby	464	9.944	9.268	9.274	9.271	858.1	1.509
+Native	objx_s	scientific_native	scientific@canonical_v2	166	2.3	1.774	1.827	1.8	160.5	0.745
+MES	xres0	scientific_xres_xeoa0_l020_k40	scientific@canonical_v2	166	3.354	2.824	2.764	2.794	189.5	0.642
+Native	objx_s	sports_native	sports	854	18.773	18.303	18.417	18.36	1934.2	3.027
+MES	xres0	sports_xres_xeoa0_l010_k80	sports	854	25.579	25.075	25.031	25.053	2126.2	2.99

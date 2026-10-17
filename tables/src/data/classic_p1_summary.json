@@ -1,0 +1,341 @@
+{
+ "rule": "two-sided paired $t$-test over seeds 1--5, Holm correction over the datasets of each contrast, $p<0.05$",
+ "datasets_table1": [
+  "baby",
+  "pantry",
+  "scientific",
+  "sports"
+ ],
+ "datasets_fusion": [
+  "baby",
+  "pantry",
+  "scientific",
+  "sports",
+  "clothing",
+  "instruments"
+ ],
+ "same_ckpt_msca": {
+  "baby": 0,
+  "pantry": 0,
+  "scientific": 1,
+  "sports": 5,
+  "clothing": 5,
+  "instruments": 5
+ },
+ "same_ckpt_mes": {
+  "baby": 5,
+  "pantry": 5,
+  "scientific": 5,
+  "sports": 5,
+  "clothing": 0,
+  "instruments": 0
+ },
+ "msca_means": {
+  "baby": {
+   "t1": 0.10396000000000001,
+   "fusion_plain": 0.1040646,
+   "fusion_fused": 0.10952619999999999
+  },
+  "pantry": {
+   "t1": 0.10933999999999999,
+   "fusion_plain": 0.1101304,
+   "fusion_fused": 0.11747459999999998
+  },
+  "scientific": {
+   "t1": 0.13796,
+   "fusion_plain": 0.13770140000000003,
+   "fusion_fused": 0.14244079999999998
+  },
+  "sports": {
+   "t1": 0.11971999999999998,
+   "fusion_plain": 0.1197118,
+   "fusion_fused": 0.1275672
+  },
+  "clothing": {
+   "t1": 0.09466000000000001,
+   "fusion_plain": 0.094641,
+   "fusion_fused": 0.1073296
+  },
+  "instruments": {
+   "t1": 0.14094,
+   "fusion_plain": 0.1409536,
+   "fusion_fused": 0.1481172
+  }
+ },
+ "contrasts": {
+  "current_t1mes_minus_t1msca_DS4": [
+   {
+    "dataset": "baby",
+    "mean_a": 0.1048,
+    "mean_b": 0.10396,
+    "diff": 0.0008399999999999963,
+    "p": 0.2014661560451806,
+    "p_holm": 0.2014661560451806,
+    "reject": 0,
+    "wins": 4,
+    "n": 5
+   },
+   {
+    "dataset": "pantry",
+    "mean_a": 0.11236,
+    "mean_b": 0.10933999999999999,
+    "diff": 0.003020000000000003,
+    "p": 0.0006381712566452509,
+    "p_holm": 0.0025526850265810037,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "scientific",
+    "mean_a": 0.14042,
+    "mean_b": 0.13796,
+    "diff": 0.0024599999999999956,
+    "p": 0.03397608476924023,
+    "p_holm": 0.06795216953848046,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "sports",
+    "mean_a": 0.12116,
+    "mean_b": 0.11972,
+    "diff": 0.0014400000000000025,
+    "p": 0.005618835850829433,
+    "p_holm": 0.016856507552488298,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   }
+  ],
+  "p1_t1mes_minus_fusmsca_DS4": [
+   {
+    "dataset": "baby",
+    "mean_a": 0.1048,
+    "mean_b": 0.10406460000000001,
+    "diff": 0.0007353999999999972,
+    "p": 0.08408385558285993,
+    "p_holm": 0.08408385558285993,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "pantry",
+    "mean_a": 0.11236,
+    "mean_b": 0.1101304,
+    "diff": 0.002229600000000001,
+    "p": 0.010574319147363733,
+    "p_holm": 0.0317229574420912,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "scientific",
+    "mean_a": 0.14042,
+    "mean_b": 0.1377014,
+    "diff": 0.002718599999999999,
+    "p": 0.03203775558579649,
+    "p_holm": 0.06407551117159298,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "sports",
+    "mean_a": 0.12116,
+    "mean_b": 0.1197118,
+    "diff": 0.0014482000000000023,
+    "p": 0.005134828590695276,
+    "p_holm": 0.020539314362781103,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   }
+  ],
+  "p1_fusmes_minus_fusmsca_DS4": [
+   {
+    "dataset": "baby",
+    "mean_a": 0.1047914,
+    "mean_b": 0.10406460000000001,
+    "diff": 0.0007267999999999997,
+    "p": 0.09238486832009038,
+    "p_holm": 0.09238486832009038,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "pantry",
+    "mean_a": 0.1123598,
+    "mean_b": 0.1101304,
+    "diff": 0.0022294000000000007,
+    "p": 0.010400869401222205,
+    "p_holm": 0.031202608203666615,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "scientific",
+    "mean_a": 0.14045,
+    "mean_b": 0.1377014,
+    "diff": 0.0027486000000000064,
+    "p": 0.030798816651975924,
+    "p_holm": 0.06159763330395185,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "sports",
+    "mean_a": 0.121166,
+    "mean_b": 0.1197118,
+    "diff": 0.0014542000000000027,
+    "p": 0.004760985113630078,
+    "p_holm": 0.019043940454520313,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   }
+  ],
+  "p1_fusmes_minus_fusmsca_DS6": [
+   {
+    "dataset": "baby",
+    "mean_a": 0.1047914,
+    "mean_b": 0.10406460000000001,
+    "diff": 0.0007267999999999997,
+    "p": 0.09238486832009038,
+    "p_holm": 0.09238486832009038,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "pantry",
+    "mean_a": 0.1123598,
+    "mean_b": 0.1101304,
+    "diff": 0.0022294000000000007,
+    "p": 0.010400869401222205,
+    "p_holm": 0.04160347760488882,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "scientific",
+    "mean_a": 0.14045,
+    "mean_b": 0.1377014,
+    "diff": 0.0027486000000000064,
+    "p": 0.030798816651975924,
+    "p_holm": 0.07362279630162996,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "sports",
+    "mean_a": 0.121166,
+    "mean_b": 0.1197118,
+    "diff": 0.0014542000000000027,
+    "p": 0.004760985113630078,
+    "p_holm": 0.023804925568150392,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "clothing",
+    "mean_a": 0.0974812,
+    "mean_b": 0.094641,
+    "diff": 0.0028401999999999985,
+    "p": 0.0009810458463196312,
+    "p_holm": 0.005886275077917787,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "instruments",
+    "mean_a": 0.145096,
+    "mean_b": 0.1409536,
+    "diff": 0.004142399999999996,
+    "p": 0.02454093210054332,
+    "p_holm": 0.07362279630162996,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   }
+  ],
+  "current_fusmes_minus_t1msca_DS6": [
+   {
+    "dataset": "baby",
+    "mean_a": 0.1047914,
+    "mean_b": 0.10396,
+    "diff": 0.0008313999999999989,
+    "p": 0.21089420757913535,
+    "p_holm": 0.21089420757913535,
+    "reject": 0,
+    "wins": 4,
+    "n": 5
+   },
+   {
+    "dataset": "pantry",
+    "mean_a": 0.1123598,
+    "mean_b": 0.10933999999999999,
+    "diff": 0.003019800000000003,
+    "p": 0.0005919850867765746,
+    "p_holm": 0.0035519105206594476,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "scientific",
+    "mean_a": 0.14045,
+    "mean_b": 0.13796,
+    "diff": 0.0024900000000000035,
+    "p": 0.03290639561039872,
+    "p_holm": 0.0717937657522017,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "sports",
+    "mean_a": 0.121166,
+    "mean_b": 0.11972,
+    "diff": 0.0014460000000000028,
+    "p": 0.005198847363642117,
+    "p_holm": 0.020795389454568467,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "clothing",
+    "mean_a": 0.0974812,
+    "mean_b": 0.09466,
+    "diff": 0.0028211999999999985,
+    "p": 0.000932701355519377,
+    "p_holm": 0.004663506777596885,
+    "reject": 1,
+    "wins": 5,
+    "n": 5
+   },
+   {
+    "dataset": "instruments",
+    "mean_a": 0.145096,
+    "mean_b": 0.14094,
+    "diff": 0.004155999999999998,
+    "p": 0.023931255250733897,
+    "p_holm": 0.0717937657522017,
+    "reject": 0,
+    "wins": 5,
+    "n": 5
+   }
+  ]
+ }
+}

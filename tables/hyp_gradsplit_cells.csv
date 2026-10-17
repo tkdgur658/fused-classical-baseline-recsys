@@ -1,0 +1,17 @@
+dataset,arm,label,n,r20_mean,r20_sd,seeds
+pantry,XRE,Proposed (XRE),5,0.113700,0.001657,0.1117/0.1129/0.1144/0.1161/0.1134
+pantry,e3,Unmatched full-view XRE,5,0.112080,0.001452,0.1104/0.1121/0.1118/0.1144/0.1117
+pantry,pos,Raise positive only,5,0.110320,0.001408,0.1112/0.1089/0.1087/0.1117/0.1111
+pantry,disp,Lower list occupant only,5,0.113240,0.002290,0.1100/0.1134/0.1150/0.1157/0.1121
+pantry,bdrand,Lower random list item,5,0.113360,0.001405,0.1113/0.1131/0.1134/0.1152/0.1138
+pantry,bdnoanc,"Lower occupant, no anchor",5,0.111520,0.003417,0.1118/0.1075/0.1089/0.1160/0.1134
+pantry,A1,Anchor term (A),5,0.111500,0.001200,0.1100/0.1108/0.1117/0.1132/0.1118
+pantry,Native,Backbone (MSCA),5,0.109340,0.001006,0.1089/0.1084/0.1089/0.1110/0.1095
+scientific,XRE,Proposed (XRE),5,0.142260,0.001857,0.1444/0.1418/0.1403/0.1408/0.1440
+scientific,e3,Unmatched full-view XRE,5,0.142260,0.001762,0.1445/0.1406/0.1405/0.1422/0.1435
+scientific,pos,Raise positive only,5,0.141180,0.001903,0.1435/0.1396/0.1398/0.1400/0.1430
+scientific,disp,Lower list occupant only,5,0.142220,0.002265,0.1453/0.1408/0.1398/0.1414/0.1438
+scientific,bdrand,Lower random list item,5,0.141480,0.001937,0.1436/0.1400/0.1402/0.1400/0.1436
+scientific,bdnoanc,"Lower occupant, no anchor",5,0.137840,0.002589,0.1406/0.1365/0.1348/0.1368/0.1405
+scientific,A1,Anchor term (A),5,0.140620,0.001341,0.1422/0.1404/0.1389/0.1399/0.1417
+scientific,Native,Backbone (MSCA),5,0.137960,0.002263,0.1399/0.1359/0.1372/0.1360/0.1408

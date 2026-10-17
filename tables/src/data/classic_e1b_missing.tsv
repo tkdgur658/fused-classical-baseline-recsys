@@ -1,0 +1,17 @@
+model	dataset	seed	reason
+COHESION	scientific	3	TABLE_FUSION gate
+COHESION	scientific	4	TABLE_FUSION gate
+LGMRec	pantry	3	TABLE_FUSION gate
+LGMRec	pantry	5	TABLE_FUSION gate
+LGMRec	scientific	2	TABLE_FUSION gate
+LGMRec	scientific	4	TABLE_FUSION gate
+LGMRec	scientific	5	TABLE_FUSION gate
+LGMRec	sports	3	TABLE_FUSION gate
+FREEDOM	arts	1	no dump
+FREEDOM	arts	2	no dump
+FREEDOM	arts	4	no dump
+FREEDOM	arts	5	no dump
+LGMRec	arts	1	no dump
+LGMRec	arts	3	no dump
+LGMRec	arts	4	no dump
+LGMRec	arts	5	no dump

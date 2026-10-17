@@ -1,0 +1,5 @@
+dataset,msca_best_epoch,xre_best_epoch,msca_best_epochs,xre_best_epochs,seeds_xre_not_later,msca_best_val,xre_best_val,best_val_gain_pct,matched_gap_pct,matched_gap_pos,matched_n,reach_epoch_mean,reach_seeds,reach_epochs
+baby,11.4,8.6,12/10/12/12/11,9/8/9/9/8,5,0.1030,0.1050,1.98,4.40,5,5,7.2,5,7/7/7/7/8
+pantry,28.2,15.0,26/41/27/20/27,23/15/14/12/11,5,0.1255,0.1302,3.76,5.67,5,5,8.2,5,8/10/7/8/8
+scientific,35.0,18.4,24/52/23/48/28,15/16/27/19/15,4,0.1869,0.1931,3.35,5.42,5,5,9.2,5,7/9/11/11/8
+sports,36.8,12.2,40/36/47/35/26,10/15/14/11/11,5,0.1174,0.1205,2.64,9.43,5,5,8.2,5,8/8/9/8/8
